@@ -1,0 +1,1663 @@
+{
+   "AttrLookup": {
+      "Attribute": [
+         {
+            "TagName": "BurstRadius",
+            "Target": "Blast Radius"
+         },
+         {
+            "TagName": "ShieldRegenDelay",
+            "Target": "Recharge Delay"
+         },
+         {
+            "TagName": "ShieldRegenRate",
+            "Target": "Recharge Rate"
+         },
+         {
+            "TagName": "IncendiaryImpactDamageModifier",
+            "Target": "Incendiary Impact Multiplier"
+         },
+         {
+            "TagName": "IncendiaryPassiveDamageModifier",
+            "Target": "Incendiary Passive Multiplier"
+         },
+         {
+            "TagName": "CorrosiveImpactDamageModifier",
+            "Target": "Corrosive Impact Multiplier"
+         },
+         {
+            "TagName": "CorrosivePassiveDamageModifier",
+            "Target": "Corrosive Passive Multiplier"
+         },
+         {
+            "TagName": "ShockImpactDamageModifier",
+            "Target": "Shock Impact Multiplier"
+         },
+         {
+            "TagName": "ShockPassiveDamageModifier",
+            "Target": "Shock Passive Multiplier"
+         }
+      ]
+   },
+   "Collection": {
+      "CollectionName": "Shield",
+      "SubFolder": [
+         {
+            "FolderPartType": "Support",
+            "Part": [
+               {
+                  "PartType": "Gear Type",
+                  "Name": "gd_shields.A_Item.Item_Shield",
+                  "_id": "j300"
+               },
+               {
+                  "PartType": "Item Grade",
+                  "Name": "gd_itemgrades.Gear.ItemGrade_Gear_Shield",
+                  "_id": "k300"
+               },
+               {
+                  "PartType": "Item Grade",
+                  "Name": "dlc3_gd_customitems.Items.CustomItem_Shield_Anshin_Rose",
+                  "_id": "k301"
+               },
+               {
+                  "PartType": "Item Grade",
+                  "Name": "dlc3_gd_customitems.Items.CustomItem_Shield_Atlas_Omega",
+                  "_id": "k302"
+               },
+               {
+                  "PartType": "Item Grade",
+                  "Name": "dlc3_gd_customitems.Items.CustomItem_Shield_Pangolin_Ironclad",
+                  "_id": "k303"
+               },
+               {
+                  "PartType": "Item Grade",
+                  "Name": "gd_customitems.Items.CustomItem_Shield_KingWeeWee",
+                  "_id": "k304"
+               },
+               {
+                  "PartType": "Item Grade",
+                  "Name": "gd_customitems.Items.CustomItem_Shield_CrackedSash",
+                  "_id": "k305"
+               },
+               {
+                  "Name": "gd_manufacturers.Manufacturers.Pangolin",
+                  "PartType": "Manufacturer",
+                  "Manufacturer": "Pangolin",
+                  "DispName": "Pangolin",
+                  "_id": "i300"
+               },
+               {
+                  "Name": "gd_manufacturers.Manufacturers.Anshin",
+                  "PartType": "Manufacturer",
+                  "Manufacturer": "Anshin",
+                  "DispName": "Anshin",
+                  "_id": "i301"
+               }
+            ]
+         },
+         {
+            "FolderPartType": "Names",
+            "Part": [
+               {
+                  "PartType": "Prefix",
+                  "Name": "gd_shields.Prefix.Prefix_Max1_Reinforced",
+                  "DispName": "Reinforced",
+                  "TitleAddend": "3",
+                  "Priority": "5.1",
+                  "_id": "p300"
+               },
+               {
+                  "PartType": "Prefix",
+                  "Name": "gd_shields.Prefix.Prefix_Max2_Hardened",
+                  "DispName": "Hardened",
+                  "Priority": "6.1",
+                  "TitleAddend": "6",
+                  "_id": "p301"
+               },
+               {
+                  "PartType": "Prefix",
+                  "Name": "gd_shields.Prefix.Prefix_Max3_Unbreakable",
+                  "DispName": "Unbreakable",
+                  "Priority": "7.1",
+                  "TitleAddend": "9",
+                  "_id": "p302"
+               },
+               {
+                  "PartType": "Prefix",
+                  "Name": "gd_shields.Prefix.Prefix_Max4_Impenetrable",
+                  "DispName": "Impenetrable",
+                  "Priority": "8.1",
+                  "TitleAddend": "7",
+                  "_id": "p303"
+               },
+               {
+                  "PartType": "Prefix",
+                  "Name": "gd_shields.Prefix.Prefix_none",
+                  "DispName": "",
+                  "Priority": "15",
+                  "_id": "p304"
+               },
+               {
+                  "PartType": "Prefix",
+                  "Name": "gd_shields.Prefix.Prefix_Quality1_Balanced",
+                  "DispName": "Balanced",
+                  "TitleAddend": "10",
+                  "Priority": "1",
+                  "_id": "p305"
+               },
+               {
+                  "PartType": "Prefix",
+                  "Name": "gd_shields.Prefix.Prefix_Quality2_Symmetrical",
+                  "DispName": "Symmetrical",
+                  "TitleAddend": "4",
+                  "Priority": "2",
+                  "_id": "p306"
+               },
+               {
+                  "PartType": "Prefix",
+                  "Name": "gd_shields.Prefix.Prefix_Quality3_Sterling",
+                  "DispName": "Sterling",
+                  "TitleAddend": "15",
+                  "Priority": "3",
+                  "_id": "p307"
+               },
+               {
+                  "PartType": "Prefix",
+                  "Name": "gd_shields.Prefix.Prefix_Quality4_Harmonious",
+                  "DispName": "Harmonious",
+                  "TitleAddend": "11",
+                  "Priority": "4",
+                  "_id": "p308"
+               },
+               {
+                  "PartType": "Prefix",
+                  "Name": "gd_shields.Prefix.Prefix_Speed1_QuickCharge",
+                  "DispName": "Quick Charge",
+                  "Priority": "5",
+                  "_id": "p309"
+               },
+               {
+                  "PartType": "Prefix",
+                  "Name": "gd_shields.Prefix.Prefix_Speed2_Accelerated",
+                  "DispName": "Accelerated",
+                  "TitleAddend": "5",
+                  "Priority": "6",
+                  "_id": "p310"
+               },
+               {
+                  "PartType": "Prefix",
+                  "Name": "gd_shields.Prefix.Prefix_Speed3_Rapid",
+                  "DispName": "Rapid",
+                  "TitleAddend": "5",
+                  "Priority": "7",
+                  "_id": "p311"
+               },
+               {
+                  "PartType": "Prefix",
+                  "Name": "gd_shields.Prefix.Prefix_Speed4_Alacritous",
+                  "DispName": "Alacritous",
+                  "TitleAddend": "8",
+                  "Priority": "8",
+                  "_id": "p312"
+               },
+               {
+                  "PartType": "Prefix",
+                  "Name": "gd_shields.Prefix.Prefix_Standard",
+                  "DispName": "Standard",
+                  "Priority": "0.1",
+                  "_id": "p313"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Anshin1_GuerillaShield",
+                  "DispName": "Guerilla Shield",
+                  "Priority": "1",
+                  "_id": "t301"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Anshin2_SkirmisherShield",
+                  "DispName": "Skirmisher Shield",
+                  "Priority": "2",
+                  "_id": "t302"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Anshin3_AmbushShield",
+                  "DispName": "Ambush Shield",
+                  "Priority": "2",
+                  "_id": "t303"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Atlas1_GroundedShield",
+                  "DispName": "Grounded Shield",
+                  "Priority": "1",
+                  "_id": "t304"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Atlas2_AnionicShield",
+                  "DispName": "Anionic Shield",
+                  "Priority": "2",
+                  "_id": "t305"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Atlas3_CationicShield",
+                  "DispName": "Cationic Shield",
+                  "Priority": "2",
+                  "_id": "t306"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Dahl1_NeutralizingShield",
+                  "DispName": "Neutralizing Shield",
+                  "Priority": "1",
+                  "_id": "t307"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Dahl2_DilutionShield",
+                  "DispName": "Dilution Shield",
+                  "Priority": "2",
+                  "_id": "t308"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Dahl3_HazmatShield",
+                  "DispName": "Hazmat Shield",
+                  "Priority": "2",
+                  "_id": "t309"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Hyperion1_ThermalShield",
+                  "DispName": "Thermal Shield",
+                  "Priority": "1",
+                  "_id": "t310"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Hyperion2_AsbesticShield",
+                  "DispName": "Asbestic Shield",
+                  "Priority": "2",
+                  "_id": "t311"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Hyperion3_EndothermicShield",
+                  "DispName": "Endothermic Shield",
+                  "Priority": "2",
+                  "_id": "t312"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Maliwan1_ShockBurstShield",
+                  "DispName": "Shock Burst Shield",
+                  "Priority": "1",
+                  "_id": "t313"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Maliwan2_ShockWaveShield",
+                  "DispName": "Shock Wave Shield",
+                  "Priority": "2",
+                  "_id": "t314"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Maliwan3_ShockNovaShield",
+                  "DispName": "Shock Nova Shield",
+                  "Priority": "2",
+                  "_id": "t315"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Pangolin1_UnyieldingShield",
+                  "DispName": "Unyielding Shield",
+                  "Priority": "1",
+                  "_id": "t316"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Pangolin2_EnduringShield",
+                  "DispName": "Enduring Shield",
+                  "Priority": "2",
+                  "_id": "t317"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Pangolin3_FortifiedShield",
+                  "DispName": "Fortified Shield",
+                  "Priority": "2",
+                  "_id": "t318"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_SandS1_AcidburstShield",
+                  "DispName": "Acid Burst Shield",
+                  "Priority": "1",
+                  "_id": "t319"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_SandS2_AcidWaveShield",
+                  "DispName": "Acid Wave Shield",
+                  "Priority": "2",
+                  "_id": "t320"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_SandS3_AcidNovaShield",
+                  "DispName": "Acid Nova Shield",
+                  "Priority": "2",
+                  "_id": "t321"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Shield",
+                  "DispName": "Shield",
+                  "Priority": "0.1",
+                  "_id": "t322"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Tediore1_HealingShield",
+                  "DispName": "Healing Shield",
+                  "Priority": "1",
+                  "_id": "t323"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Tediore2_RestorativeShield",
+                  "DispName": "Restorative Shield",
+                  "Priority": "2",
+                  "_id": "t324"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Tediore3_PanaceaShield",
+                  "DispName": "Panacea Shield",
+                  "Priority": "2",
+                  "_id": "t325"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Torgue1_ToughGuyShield",
+                  "DispName": "Tough Guy Shield",
+                  "Priority": "1",
+                  "_id": "t326"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Torgue2_MusclemanShield",
+                  "DispName": "Muscleman Shield",
+                  "Priority": "2",
+                  "_id": "t327"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Torgue3_MachoShield",
+                  "DispName": "Macho Shield",
+                  "Priority": "2",
+                  "_id": "t328"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_U_CrackedSash",
+                  "DispName": "Cracked Sash",
+                  "Priority": "2",
+                  "_id": "t329"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_U_WeeWeesSuperBooster",
+                  "DispName": "Wee Wee's Super Booster",
+                  "Priority": "2",
+                  "_id": "t330"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Vladof1_FireburstShield",
+                  "DispName": "Fire Burst Shield",
+                  "Priority": "1",
+                  "_id": "t331"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Vladof2_FireWaveShield",
+                  "DispName": "Fire Wave Shield",
+                  "Priority": "2",
+                  "_id": "t332"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "gd_shields.Title.Title_Vladof3_FireNovaShield",
+                  "DispName": "Fire Nova Shield",
+                  "Priority": "2",
+                  "_id": "t333"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "dlc3_gd_item_UniqueParts.Title.Title_P_Anshin_Rose",
+                  "DispName": "Rose",
+                  "Priority": "10",
+                  "RarityMod": "WeaponPartRarity6_Legendary",
+                  "CardText": {
+                     "CardPriority": "10",
+                     "Color": "DC4646",
+                     "Text": "Beauty and Life"
+                  },
+                  "_id": "t334"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "dlc3_gd_item_UniqueParts.Title.Title_P_Pangolin_Ironclad",
+                  "DispName": "Ironclad",
+                  "Priority": "10",
+                  "RarityMod": "WeaponPartRarity6_Legendary",
+                  "CardText": {
+                     "CardPriority": "10",
+                     "Color": "DC4646",
+                     "Text": "I stand unvanquished!"
+                  },
+                  "_id": "t335"
+               },
+               {
+                  "PartType": "Title",
+                  "Name": "dlc3_gd_item_UniqueParts.Title.Title_U_Atlas_Omega",
+                  "DispName": "Omega",
+                  "Priority": "10",
+                  "RarityMod": "WeaponPartRarity6_Legendary",
+                  "CardText": {
+                     "CardPriority": "10",
+                     "Color": "DC4646",
+                     "Text": "The Alpha and that other thing."
+                  },
+                  "_id": "t336"
+               }
+            ]
+         },
+         {
+            "FolderPartType": "Materials",
+            "Part": [
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Anshin_1",
+                  "LinkedTitle": "t301",
+                  "TitleText": "ANS-",
+                  "CostMod": "ShieldPartCost1_Common",
+                  "RarityMod": "ShieldPartRarity1_Common",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "-0.2"
+                     },
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "-0.3"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.03"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Fast Recharge"
+                  },
+                  "Manufacturer": "Anshin",
+                  "_id": "x300"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Anshin_2",
+                  "LinkedTitle": "t302",
+                  "TitleText": "ANS2-",
+                  "CostMod": "ShieldPartCost3_Uncommoner",
+                  "RarityMod": "ShieldPartRarity3_Uncommoner",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "-0.2"
+                     },
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "-0.4"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.04"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Very Fast Recharge"
+                  },
+                  "Manufacturer": "Anshin",
+                  "_id": "x301"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Anshin_3",
+                  "LinkedTitle": "t303",
+                  "TitleText": "ANS2-",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "ShieldPartRarity4_Rare",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "-0.2"
+                     },
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "-0.6"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.08"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Super Fast Recharge!"
+                  },
+                  "Manufacturer": "Anshin",
+                  "_id": "x302"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Atlas_1",
+                  "LinkedTitle": "t304",
+                  "TitleText": "ATL-",
+                  "CostMod": "ShieldPartCost2_Uncommon",
+                  "RarityMod": "ShieldPartRarity2_Uncommon",
+                  "AttrMod": {
+                     "ShockImpactDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-0.5"
+                     },
+                     "ShockPassiveDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-0.5"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Shock Resistance"
+                  },
+                  "Manufacturer": "Atlas",
+                  "_id": "x303"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Atlas_2a",
+                  "LinkedTitle": "t305",
+                  "TitleText": "ATL-",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "ShieldPartRarity4_Rare",
+                  "AttrMod": {
+                     "ShockImpactDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-1"
+                     },
+                     "ShockPassiveDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-1"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "High Shock Resistance"
+                  },
+                  "Manufacturer": "Atlas",
+                  "_id": "x304"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Atlas_3",
+                  "LinkedTitle": "t306",
+                  "TitleText": "ATL-",
+                  "CostMod": "ShieldPartCost5_VeryRare",
+                  "RarityMod": "ShieldPartRarity5_VeryRare",
+                  "AttrMod": {
+                     "ShockImpactDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-2"
+                     },
+                     "ShockPassiveDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-2"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "2",
+                     "Text": "Extreme Shock Resistance!"
+                  },
+                  "Manufacturer": "Atlas",
+                  "_id": "x305"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Dahl_1",
+                  "LinkedTitle": "t307",
+                  "TitleText": "DHL-",
+                  "CostMod": "ShieldPartCost1_Common",
+                  "RarityMod": "ShieldPartRarity1_Common",
+                  "AttrMod": {
+                     "CorrosiveImpactDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-0.5"
+                     },
+                     "CorrosivePassiveDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-0.5"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Corrosive Resistance"
+                  },
+                  "Manufacturer": "Dahl",
+                  "_id": "x306"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Dahl_2a",
+                  "LinkedTitle": "t308",
+                  "TitleText": "DHL-",
+                  "CostMod": "ShieldPartCost3_Uncommoner",
+                  "RarityMod": "ShieldPartRarity3_Uncommoner",
+                  "AttrMod": {
+                     "CorrosiveImpactDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-1"
+                     },
+                     "CorrosivePassiveDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-1"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "High Corrosive Resistance"
+                  },
+                  "Manufacturer": "Dahl",
+                  "_id": "x307"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Dahl_3",
+                  "LinkedTitle": "t309",
+                  "TitleText": "DHL-",
+                  "CostMod": "WeaponPartRarity4_Rare",
+                  "RarityMod": "ShieldPartCost4_Rare",
+                  "AttrMod": {
+                     "CorrosiveImpactDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-2"
+                     },
+                     "CorrosivePassiveDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-2"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Extreme Corrosive Resistance!"
+                  },
+                  "Manufacturer": "Dahl",
+                  "_id": "x308"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Hyperion_1",
+                  "LinkedTitle": "t310",
+                  "TitleText": "HYP-",
+                  "CostMod": "ShieldPartCost2_Uncommon",
+                  "RarityMod": "ShieldPartRarity2_Uncommon",
+                  "AttrMod": {
+                     "IncendiaryImpactDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-0.5"
+                     },
+                     "IncendiaryPassiveDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-0.5"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Fire Resistance"
+                  },
+                  "Manufacturer": "Hyperion",
+                  "_id": "x309"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Hyperion_2a",
+                  "LinkedTitle": "t311",
+                  "TitleText": "HYP-",
+                  "CostMod": "WeaponPartRarity4_Rare",
+                  "RarityMod": "ShieldPartRarity4_Rare",
+                  "AttrMod": {
+                     "IncendiaryImpactDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-1"
+                     },
+                     "IncendiaryPassiveDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-1"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "High Fire Resistance"
+                  },
+                  "Manufacturer": "Hyperion",
+                  "_id": "x310"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Hyperion_3",
+                  "LinkedTitle": "t312",
+                  "TitleText": "HYP-",
+                  "CostMod": "ShieldPartCost5_VeryRare",
+                  "RarityMod": "ShieldPartRarity5_VeryRare",
+                  "AttrMod": {
+                     "IncendiaryImpactDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-2"
+                     },
+                     "IncendiaryPassiveDamageModifier": {
+                        "_modType": "Scale",
+                        "__text": "-2"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Extreme Fire Resistance!"
+                  },
+                  "Manufacturer": "Hyperion",
+                  "_id": "x311"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Maliwan_1",
+                  "LinkedTitle": "t313",
+                  "TitleText": "MLN-",
+                  "CostMod": "WeaponPartRarity2_Uncommon",
+                  "RarityMod": "ShieldPartRarity1_Common",
+                  "AttrMod": {
+                     "BurstRadius": {
+                        "_modType": "PostAdd",
+                        "__text": "256"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "3",
+                     "Text": "Creates a small Shock Burst when depleted."
+                  },
+                  "Manufacturer": "Maliwan",
+                  "_id": "x312"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Maliwan_2a",
+                  "LinkedTitle": "t314",
+                  "TitleText": "MLN-",
+                  "CostMod": "ShieldPartCost3_Uncommoner",
+                  "RarityMod": "ShieldPartRarity3_Uncommoner",
+                  "AttrMod": {
+                     "BurstRadius": {
+                        "_modType": "PostAdd",
+                        "__text": "384"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "2",
+                     "Text": "Creates a Shock Wave when depleted."
+                  },
+                  "Manufacturer": "Maliwan",
+                  "_id": "x313"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Maliwan_3",
+                  "LinkedTitle": "t315",
+                  "TitleText": "MLN-",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "ShieldPartRarity4_Rare",
+                  "AttrMod": {
+                     "BurstRadius": {
+                        "_modType": "PostAdd",
+                        "__text": "512"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "2",
+                     "Text": "Creates a large Shock Nova when depleted."
+                  },
+                  "Manufacturer": "Maliwan",
+                  "_id": "x314"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Pangolin_1",
+                  "LinkedTitle": "t316",
+                  "TitleText": "PNG-",
+                  "CostMod": "ShieldPartCost2_Uncommon",
+                  "RarityMod": "ShieldPartRarity2_Uncommon",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.3"
+                     },
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "0.3"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "-0.03"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "High Capacity"
+                  },
+                  "Manufacturer": "Pangolin",
+                  "_id": "x315"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Pangolin_2a",
+                  "LinkedTitle": "t317",
+                  "TitleText": "PNG-",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "ShieldPartRarity4_Rare",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.4"
+                     },
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "0.2"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "-0.03"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Very High Capacity"
+                  },
+                  "Manufacturer": "Pangolin",
+                  "_id": "x316"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Pangolin_3",
+                  "LinkedTitle": "t318",
+                  "TitleText": "PNG2-",
+                  "CostMod": "ShieldPartCost5_VeryRare",
+                  "RarityMod": "ShieldPartRarity5_VeryRare",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.6"
+                     },
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "0.1"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "-0.03"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Overcharge Capacity!"
+                  },
+                  "Manufacturer": "Pangolin",
+                  "_id": "x317"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_SandS_1",
+                  "LinkedTitle": "t319",
+                  "TitleText": "SnS-",
+                  "CostMod": "ShieldPartCost1_Common",
+                  "RarityMod": "ShieldPartRarity1_Common",
+                  "AttrMod": {
+                     "BurstRadius": {
+                        "_modType": "PostAdd",
+                        "__text": "256"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Creates a small Acid burst when depleted."
+                  },
+                  "Manufacturer": "SandS Munitions",
+                  "_id": "x318"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_SandS_2a",
+                  "LinkedTitle": "t320",
+                  "TitleText": "SnS-",
+                  "CostMod": "ShieldPartCost3_Uncommoner",
+                  "RarityMod": "ShieldPartRarity3_Uncommoner",
+                  "AttrMod": {
+                     "BurstRadius": {
+                        "_modType": "PostAdd",
+                        "__text": "384"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "2",
+                     "Text": "Creates an Acid Wave when depleted."
+                  },
+                  "Manufacturer": "SandS Munitions",
+                  "_id": "x319"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_SandS_3",
+                  "LinkedTitle": "t321",
+                  "TitleText": "SnS-",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "ShieldPartRarity4_Rare",
+                  "AttrMod": {
+                     "BurstRadius": {
+                        "_modType": "PostAdd",
+                        "__text": "512"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "2",
+                     "Text": "Creates a large Acid Nova when depleted."
+                  },
+                  "Manufacturer": "SandS Munitions",
+                  "_id": "x320"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Tediore_0_Starter",
+                  "TitleText": "TDR-",
+                  "CostMod": "ShieldPartCost0_Cheap",
+                  "RarityMod": "ShieldPartRarity1_Common",
+                  "Manufacturer": "Tediore",
+                  "_id": "x321"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Tediore_1",
+                  "LinkedTitle": "t323",
+                  "TitleText": "TDR-",
+                  "CostMod": "ShieldPartCost1_Common",
+                  "RarityMod": "ShieldPartRarity1_Common",
+                  "AttrMod": {
+                     "HealthRegen": {
+                        "_modType": "PostAdd",
+                        "__text": "0.035"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Very slow health regeneration"
+                  },
+                  "Manufacturer": "Tediore",
+                  "_id": "x322"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Tediore_2a",
+                  "LinkedTitle": "t324",
+                  "TitleText": "TDR-",
+                  "CostMod": "ShieldPartCost3_Uncommoner",
+                  "RarityMod": "ShieldPartRarity3_Uncommoner",
+                  "AttrMod": {
+                     "HealthRegen": {
+                        "_modType": "PostAdd",
+                        "__text": "0.08"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Slow health regeneration"
+                  },
+                  "Manufacturer": "Tediore",
+                  "_id": "x323"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Tediore_3",
+                  "LinkedTitle": "t325",
+                  "TitleText": "TDR-",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "ShieldPartRarity4_Rare",
+                  "AttrMod": {
+                     "HealthRegen": {
+                        "_modType": "PostAdd",
+                        "__text": "0.2"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Quick Health Regeneration!"
+                  },
+                  "Manufacturer": "Tediore",
+                  "_id": "x324"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Torgue_1",
+                  "LinkedTitle": "t326",
+                  "TitleText": "TRG-",
+                  "CostMod": "ShieldPartCost1_Common",
+                  "RarityMod": "ShieldPartRarity1_Common",
+                  "AttrMod": {
+                     "Health": {
+                        "_modType": "Scale",
+                        "__text": "0.3"
+                     },
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "-0.2"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Health Boost 30%"
+                  },
+                  "Manufacturer": "Torgue",
+                  "_id": "x325"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Torgue_2a",
+                  "LinkedTitle": "t327",
+                  "TitleText": "TRG-",
+                  "CostMod": "ShieldPartCost3_Uncommoner",
+                  "RarityMod": "ShieldPartRarity3_Uncommoner",
+                  "AttrMod": {
+                     "Health": {
+                        "_modType": "Scale",
+                        "__text": "0.4"
+                     },
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "-0.2"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "3",
+                     "Text": "Health Boost 40%"
+                  },
+                  "Manufacturer": "Torgue",
+                  "_id": "x326"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Torgue_3",
+                  "LinkedTitle": "t328",
+                  "TitleText": "TRG-",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "ShieldPartRarity4_Rare",
+                  "AttrMod": {
+                     "Health": {
+                        "_modType": "Scale",
+                        "__text": "0.6"
+                     },
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "-0.2"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "3",
+                     "Text": "Health Boost 60%"
+                  },
+                  "Manufacturer": "Torgue",
+                  "_id": "x327"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Vladof_1",
+                  "LinkedTitle": "t331",
+                  "TitleText": "VDF-",
+                  "CostMod": "ShieldPartCost1_Common",
+                  "RarityMod": "ShieldPartRarity1_Common",
+                  "AttrMod": {
+                     "BurstRadius": {
+                        "_modType": "PostAdd",
+                        "__text": "256"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "3",
+                     "Text": "Creates a small Fire Burst when depleted."
+                  },
+                  "Manufacturer": "Vladof",
+                  "_id": "x328"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Vladof_2a",
+                  "LinkedTitle": "t332",
+                  "TitleText": "VDF-",
+                  "CostMod": "ShieldPartCost3_Uncommoner",
+                  "RarityMod": "ShieldPartRarity3_Uncommoner",
+                  "AttrMod": {
+                     "BurstRadius": {
+                        "_modType": "PostAdd",
+                        "__text": "384"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "3",
+                     "Text": "Creates a Fire Wave when depleted."
+                  },
+                  "Manufacturer": "Vladof",
+                  "_id": "x329"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.ManufacturerMaterials.Material_Vladof_3",
+                  "LinkedTitle": "t333",
+                  "TitleText": "VDF-",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "ShieldPartRarity4_Rare",
+                  "AttrMod": {
+                     "BurstRadius": {
+                        "_modType": "PostAdd",
+                        "__text": "512"
+                     }
+                  },
+                  "CardText": {
+                     "CardPriority": "3",
+                     "Text": "Creates a large Fire Nova when depleted."
+                  },
+                  "Manufacturer": "Vladof",
+                  "_id": "x330"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.UniqueParts.CrackedSash_Material",
+                  "Manufacturer": "Anshin",
+                  "LinkedPrefix": [
+                     "p304"
+                  ],
+                  "LinkedTitle": "t329",
+                  "TitleText": "ANS-",
+                  "CostMod": "ShieldPartCost1_Common",
+                  "RarityMod": "ShieldPartRarity1_Common",
+                  "CardText": {
+                     "CardPriority": "1",
+                     "Text": "Fast Recharge"
+                  },
+                  "_id": "x331"
+               },
+               {
+                  "PartType": "Material",
+                  "Name": "gd_shields.UniqueParts.Shield_WeeWee_Material",
+                  "Manufacturer": "Pangolin",
+                  "LinkedPrefix": [
+                     "p304"
+                  ],
+                  "LinkedTitle": "t330",
+                  "TitleText": "TDR-",
+                  "CostMod": "ShieldPartCost5_VeryRare",
+                  "RarityMod": "ShieldPartRarity5_VeryRare",
+                  "AttrMod": {
+                     "HealthRegen": {
+                        "_modType": "PostAdd",
+                        "__text": "0.2"
+                     },
+                     "Health": {
+                        "_modType": "Scale",
+                        "__text": "0.15"
+                     }
+                  },
+                  "_id": "x332"
+               }
+            ]
+         },
+         {
+            "FolderPartType": "General",
+            "Part": [
+               {
+                  "PartType": "Shield Body",
+                  "Name": "gd_shields.Body.body1",
+                  "TitleText": "OBS",
+                  "LinkedPrefix": [
+                     "p305",
+                     "p306"
+                  ],
+                  "CostMod": "ShieldPartCost1_Common",
+                  "RarityMod": "ShieldPartRarity1_Common",
+                  "_id": "f300"
+               },
+               {
+                  "PartType": "Shield Body",
+                  "Name": "gd_shields.Body.body1_balanced",
+                  "LinkedPrefix": [
+                     "p305",
+                     "p306",
+                     "p307",
+                     "p308"
+                  ],
+                  "TitleText": "OS",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "ShieldPartRarity4_Rare",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.2"
+                     },
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "-0.25"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.05"
+                     }
+                  },
+                  "_id": "f301"
+               },
+               {
+                  "PartType": "Shield Body",
+                  "Name": "gd_shields.Body.body2",
+                  "LinkedPrefix": [
+                     "p309",
+                     "p310"
+                  ],
+                  "TitleText": "FRR",
+                  "TechMod": "1",
+                  "CostMod": "ShieldPartCost2_Uncommon",
+                  "RarityMod": "ShieldPartRarity2_Uncommon",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "-0.2"
+                     },
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "-0.25"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.05"
+                     }
+                  },
+                  "_id": "f302"
+               },
+               {
+                  "PartType": "Shield Body",
+                  "Name": "gd_shields.Body.body3",
+                  "LinkedPrefix": [
+                     "p300",
+                     "p301"
+                  ],
+                  "TitleText": "OC",
+                  "TechMod": "2",
+                  "CostMod": "ShieldPartCost3_Uncommoner",
+                  "RarityMod": "ShieldPartRarity3_Uncommoner",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.25"
+                     },
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "0.3"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "-0.06"
+                     }
+                  },
+                  "_id": "f303"
+               },
+               {
+                  "PartType": "Shield Body",
+                  "Name": "gd_shields.Body.body3b_power",
+                  "LinkedPrefix": [
+                     "p300",
+                     "p301",
+                     "p302",
+                     "p303"
+                  ],
+                  "TitleText": "XC",
+                  "TechMod": "2",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "ShieldPartRarity4_Rare",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.4"
+                     },
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "0.3"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "-0.06"
+                     }
+                  },
+                  "_id": "f304"
+               },
+               {
+                  "PartType": "Shield Body",
+                  "Name": "gd_shields.Body.body4",
+                  "LinkedPrefix": [
+                     "p309",
+                     "p310",
+                     "p311",
+                     "p312"
+                  ],
+                  "TitleText": "AWE",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "ShieldPartRarity4_Rare",
+                  "TechMod": "2",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "-0.3"
+                     },
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "-0.5"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.1"
+                     }
+                  },
+                  "_id": "f305"
+               },
+               {
+                  "PartType": "Shield Body",
+                  "Name": "gd_shields.UniqueParts.body4_CrackedSash",
+                  "Manufacturer": "Anshin",
+                  "TitleText": "CRKED",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "ShieldPartRarity4_Rare",
+                  "TechMod": "2",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "Scale",
+                        "__text": "-1.5"
+                     },
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "-2.5"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "Scale",
+                        "__text": "2"
+                     }
+                  },
+                  "_id": "f306"
+               },
+               {
+                  "PartType": "Shield Body",
+                  "Name": "dlc3_gd_item_UniqueParts.Shield.body3_Pangolin_Ironclad",
+                  "Manufacturer": "Pangolin",
+                  "LinkedPrefix": [
+                     "p300",
+                     "p301"
+                  ],
+                  "LinkedTitle": "t335",
+                  "TitleText": "OC",
+                  "CostMod": "ShieldPartCost3_Uncommoner",
+                  "RarityMod": "WeaponPartRarity6_Legendary",
+                  "TechMod": "2",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.55"
+                     },
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "0.3"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "-0.06"
+                     }
+                  },
+                  "_id": "f307"
+               },
+               {
+                  "PartType": "Shield Body",
+                  "Name": "dlc3_gd_item_UniqueParts.Shield.body4_Anshin_Rose",
+                  "Manufacturer": "Anshin",
+                  "LinkedPrefix": [
+                     "p309",
+                     "p310",
+                     "p311",
+                     "p312"
+                  ],
+                  "LinkedTitle": "t334",
+                  "TitleText": "AWE",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "WeaponPartRarity6_Legendary",
+                  "TechMod": "2",
+                  "AttrMod": {
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "-0.5"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.1"
+                     },
+                     "HealthRegen": {
+                        "_modType": "PostAdd",
+                        "__text": "10"
+                     }
+                  },
+                  "_id": "f308"
+               },
+               {
+                  "PartType": "Shield Body",
+                  "Name": "dlc3_gd_item_UniqueParts.Shield.body4_Atlas_Omega",
+                  "Manufacturer": "Atlas",
+                  "LinkedPrefix": [
+                     "p309",
+                     "p310",
+                     "p311",
+                     "p312"
+                  ],
+                  "LinkedTitle": "t336",
+                  "TitleText": "OO",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "WeaponPartRarity6_Legendary",
+                  "TechMod": "2",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.22"
+                     },
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "-0.7"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.15"
+                     }
+                  },
+                  "_id": "f309"
+               },
+               {
+                  "PartType": "Shield Left Side",
+                  "Name": "gd_shields.LeftSide.leftside1",
+                  "CostMod": "ShieldPartCost0_Cheap",
+                  "RarityMod": "ShieldPartRarity1_Common",
+                  "TechMod": "1",
+                  "_id": "l300"
+               },
+               {
+                  "PartType": "Shield Left Side",
+                  "Name": "gd_shields.LeftSide.leftside2",
+                  "TitleAddend": "20",
+                  "CostMod": "ShieldPartCost2_Uncommon",
+                  "RarityMod": "ShieldPartRarity2_Uncommon",
+                  "TechMod": "1",
+                  "AttrMod": {
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "-0.15"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.02"
+                     }
+                  },
+                  "_id": "l301"
+               },
+               {
+                  "PartType": "Shield Left Side",
+                  "Name": "gd_shields.LeftSide.leftside3",
+                  "TitleAddend": "40",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "ShieldPartRarity4_Rare",
+                  "TechMod": "2",
+                  "AttrMod": {
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "-0.25"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.04"
+                     }
+                  },
+                  "_id": "l302"
+               },
+               {
+                  "PartType": "Shield Left Side",
+                  "Name": "gd_shields.LeftSide.leftside4",
+                  "TitleAddend": "5",
+                  "CostMod": "ShieldPartCost5_VeryRare",
+                  "RarityMod": "ShieldPartRarity5_VeryRare",
+                  "TechMod": "3",
+                  "AttrMod": {
+                     "ShieldRegenDelay": {
+                        "_modType": "Scale",
+                        "__text": "-0.45"
+                     },
+                     "ShieldRegenRate": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.07"
+                     }
+                  },
+                  "_id": "l303"
+               },
+               {
+                  "PartType": "Shield Right Side",
+                  "Name": "gd_shields.RightSide.rightside1",
+                  "CostMod": "ShieldPartCost0_Cheap",
+                  "RarityMod": "ShieldPartRarity1_Common",
+                  "TechMod": "1",
+                  "_id": "r300"
+               },
+               {
+                  "PartType": "Shield Right Side",
+                  "Name": "gd_shields.RightSide.rightside2",
+                  "TitleAddend": "10",
+                  "CostMod": "ShieldPartCost2_Uncommon",
+                  "RarityMod": "ShieldPartRarity2_Uncommon",
+                  "TechMod": "1",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.1"
+                     }
+                  },
+                  "_id": "r301"
+               },
+               {
+                  "PartType": "Shield Right Side",
+                  "Name": "gd_shields.RightSide.rightside3",
+                  "TitleAddend": "30",
+                  "CostMod": "ShieldPartCost3_Uncommoner",
+                  "RarityMod": "ShieldPartRarity3_Uncommoner",
+                  "TechMod": "2",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.2"
+                     }
+                  },
+                  "_id": "r302"
+               },
+               {
+                  "PartType": "Shield Right Side",
+                  "Name": "gd_shields.RightSide.rightside4",
+                  "TitleAddend": "50",
+                  "CostMod": "ShieldPartCost4_Rare",
+                  "RarityMod": "ShieldPartRarity4_Rare",
+                  "TechMod": "3",
+                  "AttrMod": {
+                     "Capacity": {
+                        "_modType": "PreAdd",
+                        "_init": "BaseCapacity",
+                        "__text": "0.35"
+                     }
+                  },
+                  "_id": "r303"
+               }
+            ]
+         }
+      ],
+      "_id": "c020"
+   },
+   "_blVersion": "1.3"
+}

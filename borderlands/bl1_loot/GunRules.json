@@ -1,0 +1,6199 @@
+{
+   "GearTemplate": [
+      {
+         "TargetType": "Revolver",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i008",
+                  "ExpLevel": [
+                     "0",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i002",
+                  "ExpLevel": [
+                     "0",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i006",
+                  "ExpLevel": [
+                     "0",
+                     "17",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i005",
+                  "ExpLevel": [
+                     "0",
+                     "17",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i001",
+                  "ExpLevel": [
+                     "0",
+                     "21",
+                     "30",
+                     "39",
+                     "48",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "BaseStats": {
+            "Damage": {
+               "_modType": "Scale",
+               "__text": "2.4"
+            },
+            "CostMod": {
+               "_modType": "Multiplier",
+               "__text": "35"
+            },
+            "FireRate": {
+               "_modType": "PreAdd",
+               "__text": "0.8"
+            },
+            "Spread": {
+               "_modType": "PreAdd",
+               "__text": "1.0"
+            },
+            "Recoil": {
+               "_modType": "PreAdd",
+               "__text": "3.0"
+            },
+            "ClipSize": {
+               "_modType": "PreAdd",
+               "__text": "6"
+            },
+            "ReloadSpeed": {
+               "_modType": "PreAdd",
+               "__text": "2.5"
+            },
+            "ZoomEndFOV": {
+               "_modType": "PreAdd",
+               "__text": "56"
+            }
+         },
+         "AttrMod": {
+            "AccRegen": {
+               "_modType": "PreAdd",
+               "__text": "1"
+            },
+            "AccMin": {
+               "_modType": "PreAdd",
+               "__text": "-0.5"
+            },
+            "CritBonus": {
+               "_modType": "PreAdd",
+               "__text": "1"
+            }
+         },
+         "PartList": [
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p063-p069",
+                  "p001-p048"
+               ],
+               "Option": [
+                  "p071"
+               ],
+               "GeneralPool": "p064,p065,p066,p067,p068,p069"
+            },
+            {
+               "PartType": "Title",
+               "OptionBin": [
+                  "t022-t034"
+               ],
+               "GeneralPool": "t022,t025,t026,t027"
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j001"
+               ]
+            },
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k007"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x001,x002,x003,x004,x005,x006,x014,x015,x016,x017,x018,x019,x023,x024,x025"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "OptionBin": [
+                  "b010,b011,b012,b013,b014,b015,b016"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "OptionBin": [
+                  "f007,f008,f009,f010,f011,f012"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "BasePart": "m008,m009,m010,m011,m012",
+               "OptionBin": [
+                  "m008,m009,m010,m011,m012"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "OptionBin": [
+                  "z007-z012"
+               ]
+            },
+            {
+               "PartType": "Stock",
+               "BasePart": "s008",
+               "OptionBin": [
+                  "s005,s006,s007,s008"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "OptionBin": [
+                  "g011,g012,g013,g015,g016"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "OptionBin": [
+                  "a017,a018,a019,a020,a021,a022,a023,a024,a025,a026,a027"
+               ]
+            }
+         ],
+         "ConstraintList": {
+            "Option": [
+               {
+                  "Tag": "p064",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Normalized Damage",
+                        "CompOperator": "GreaterThan",
+                        "OperandTwo": "3.2"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p065",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Fire Rate",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "0.6"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p066",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Projectile Count",
+                        "CompOperator": "EqualTo",
+                        "OperandTwo": "1"
+                     },
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "1.5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p067",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p068",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "8"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p069",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "11"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t025",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "LessThan",
+                        "OperandTwo": "0.8"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t026",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "LessThan",
+                        "OperandTwo": "0.85"
+                     },
+                     {
+                        "AttrToCheck": "Normalized Damage",
+                        "CompOperator": "GreaterThan",
+                        "OperandTwo": "2.5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t027",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Fire Rate",
+                        "CompOperator": "LessThan",
+                        "OperandTwo": "0.65"
+                     }
+                  ]
+               }
+            ]
+         }
+      },
+      {
+         "TargetType": "Combat Shotgun",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i008",
+                  "ExpLevel": [
+                     "3",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i002",
+                  "ExpLevel": [
+                     "7",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i009",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "49",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i005",
+                  "ExpLevel": [
+                     "9",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i001",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "48",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "BaseStats": {
+            "Damage": {
+               "_modType": "Scale",
+               "__text": "0.8"
+            },
+            "CostMod": {
+               "_modType": "Multiplier",
+               "__text": "50"
+            },
+            "FireRate": {
+               "_modType": "PreAdd",
+               "__text": "1.35"
+            },
+            "Spread": {
+               "_modType": "PreAdd",
+               "__text": "6.5"
+            },
+            "Recoil": {
+               "_modType": "PreAdd",
+               "__text": "8"
+            },
+            "ClipSize": {
+               "_modType": "PreAdd",
+               "__text": "6"
+            },
+            "ReloadSpeed": {
+               "_modType": "PreAdd",
+               "__text": "4"
+            },
+            "ProjectileCount": {
+               "_modType": "PreAdd",
+               "__text": "8"
+            },
+            "ZoomEndFOV": {
+               "_modType": "PreAdd",
+               "__text": "54"
+            }
+         },
+         "PartList": [
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x001-x006",
+                  "x023-x028",
+                  "x014,x015,x016"
+               ]
+            },
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k004"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j003"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "OptionBin": [
+                  "a007-a016"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "OptionBin": [
+                  "b001-b008"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "OptionBin": [
+                  "f001-f006"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "OptionBin": [
+                  "g001,g002,g003,g005,g009,g010"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "OptionBin": [
+                  "z001-z006"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "BasePart": "m003,m004,m005,m006,m007",
+               "OptionBin": [
+                  "m003-m007"
+               ]
+            },
+            {
+               "PartType": "Stock",
+               "BasePart": "s004",
+               "OptionBin": [
+                  "s001-s004"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p056-p062",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p001,p004,p005,p006,p058,p059,p061"
+            },
+            {
+               "PartType": "Title",
+               "OptionBin": [
+                  "t008-t021"
+               ],
+               "GeneralPool": "t008,t010,t011"
+            }
+         ],
+         "ConstraintList": {
+            "Option": [
+               {
+                  "Tag": "p059",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Fire Rate",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "1"
+                     },
+                     {
+                        "AttrToCheck": "Clip Size",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "3"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p061",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "LessThan",
+                        "OperandTwo": "4"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p004",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p005",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "8"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p006",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "11"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t010",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "8"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t011",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "8"
+                     },
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "6"
+                     }
+                  ]
+               }
+            ]
+         }
+      },
+      {
+         "TargetType": "Assault Shotgun",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i010",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "48",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i006",
+                  "ExpLevel": [
+                     "8",
+                     "17",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i007",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i004",
+                  "ExpLevel": [
+                     "8",
+                     "17",
+                     "26",
+                     "35",
+                     "44",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "BaseStats": {
+            "Damage": {
+               "_modType": "Scale",
+               "__text": "0.75"
+            },
+            "CostMod": {
+               "_modType": "Multiplier",
+               "__text": "52"
+            },
+            "FireRate": {
+               "_modType": "PreAdd",
+               "__text": "0.8"
+            },
+            "Spread": {
+               "_modType": "PreAdd",
+               "__text": "7"
+            },
+            "Recoil": {
+               "_modType": "PreAdd",
+               "__text": "7"
+            },
+            "ClipSize": {
+               "_modType": "PreAdd",
+               "__text": "5"
+            },
+            "ReloadSpeed": {
+               "_modType": "PreAdd",
+               "__text": "3.5"
+            },
+            "ProjectileCount": {
+               "_modType": "PreAdd",
+               "__text": "6"
+            },
+            "ZoomEndFOV": {
+               "_modType": "PreAdd",
+               "__text": "60"
+            }
+         },
+         "PartList": [
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x029,x030,x031,x011,x012,x013",
+                  "x017-x022"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "OptionBin": [
+                  "a001-a006",
+                  "a009,a010,a013,a014,a016"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "b009"
+               ],
+               "OptionBin": [
+                  "b001,b002,b004,b006,b007"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "OptionBin": [
+                  "f001,f002,f003,f005,f006"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "OptionBin": [
+                  "g002,g006,g007,g008"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "OptionBin": [
+                  "m001,m002"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "OptionBin": [
+                  "z001-z006"
+               ]
+            },
+            {
+               "PartType": "Stock",
+               "BasePart": "s004",
+               "OptionBin": [
+                  "s001-s004"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p049-p055",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p002,p052,p053,p054,p055"
+            },
+            {
+               "PartType": "Title",
+               "OptionBin": [
+                  "t001-t007"
+               ],
+               "Option": [
+                  "t008"
+               ],
+               "GeneralPool": "t008,t001,t002,t003"
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j002"
+               ]
+            },
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k010"
+               ]
+            }
+         ],
+         "ConstraintList": {
+            "Option": [
+               {
+                  "Tag": "p052",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p053",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "8"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p054",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "11"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p055",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Reload Speed",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "2.5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t001",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Normalized Damage",
+                        "CompOperator": "GreaterThan",
+                        "OperandTwo": "1.1"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t002",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "9"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t003",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "4"
+                     }
+                  ]
+               }
+            ]
+         }
+      },
+      {
+         "TargetType": "Repeater Pistol",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i008",
+                  "ExpLevel": [
+                     "3",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i002",
+                  "ExpLevel": [
+                     "4",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i010",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "48",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i007",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i006",
+                  "ExpLevel": [
+                     "9",
+                     "17",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i009",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "49",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i004",
+                  "ExpLevel": [
+                     "8",
+                     "17",
+                     "26",
+                     "35",
+                     "44",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i001",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "48",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "BaseStats": {
+            "Damage": {
+               "_modType": "Scale",
+               "__text": "1"
+            },
+            "CostMod": {
+               "_modType": "Multiplier",
+               "__text": "30"
+            },
+            "FireRate": {
+               "_modType": "PreAdd",
+               "__text": "0.3"
+            },
+            "Spread": {
+               "_modType": "PreAdd",
+               "__text": "2"
+            },
+            "Recoil": {
+               "_modType": "PreAdd",
+               "__text": "2"
+            },
+            "ClipSize": {
+               "_modType": "PreAdd",
+               "__text": "12"
+            },
+            "ReloadSpeed": {
+               "_modType": "PreAdd",
+               "__text": "2"
+            },
+            "ZoomEndFOV": {
+               "_modType": "PreAdd",
+               "__text": "62"
+            }
+         },
+         "AttrMod": {
+            "AccRegen": {
+               "_modType": "PreAdd",
+               "__text": "-4"
+            },
+            "AccMin": {
+               "_modType": "PreAdd",
+               "__text": "-0.5"
+            },
+            "AccMax": {
+               "_modType": "PreAdd",
+               "__text": "-4"
+            }
+         },
+         "PartList": [
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x001-x006",
+                  "x017-x031",
+                  "x011,x012,x013"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j007"
+               ]
+            },
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k001"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "OptionBin": [
+                  "a028-a041"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "OptionBin": [
+                  "b017-b023"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "OptionBin": [
+                  "f013-f017"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "OptionBin": [
+                  "m013-m016"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "OptionBin": [
+                  "g017-g020",
+                  "g022-g025"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "OptionBin": [
+                  "z013-z019"
+               ]
+            },
+            {
+               "PartType": "Action",
+               "OptionBin": [
+                  "e001-e005"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p070-p076",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p072,p073,p074,p075,p076"
+            },
+            {
+               "PartType": "Title",
+               "OptionBin": [
+                  "t035-t051"
+               ],
+               "GeneralPool": "t035,t037,t038,t039,t040"
+            }
+         ],
+         "ConstraintList": {
+            "Option": [
+               {
+                  "Tag": "p072",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Clip Size",
+                        "CompOperator": "GreaterThan",
+                        "OperandTwo": "16"
+                     },
+                     {
+                        "AttrToCheck": "Damage",
+                        "CompOperator": "GreaterThan",
+                        "OperandTwo": "1.2"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p073",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Clip Size",
+                        "CompOperator": "GreaterThan",
+                        "OperandTwo": "16"
+                     },
+                     {
+                        "AttrToCheck": "Normalized Damage",
+                        "CompOperator": "GreaterThan",
+                        "OperandTwo": "1"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p074",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p075",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "8"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p076",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "11"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t037",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "1.1"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t038",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Normalized Damage",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "0.8"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t039",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Fire Rate",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "0.18"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t038",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Normalized Damage",
+                        "CompOperator": "GreaterThan",
+                        "OperandTwo": "1.3"
+                     },
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "LessThan",
+                        "OperandTwo": "1.7"
+                     }
+                  ]
+               }
+            ]
+         }
+      },
+      {
+         "TargetType": "Patrol SMG",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i008",
+                  "ExpLevel": [
+                     "3",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i002",
+                  "ExpLevel": [
+                     "6",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i006",
+                  "ExpLevel": [
+                     "9",
+                     "17",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i009",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "49",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i004",
+                  "ExpLevel": [
+                     "8",
+                     "17",
+                     "26",
+                     "35",
+                     "44",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "BaseStats": {
+            "Damage": {
+               "_modType": "Scale",
+               "__text": "0.8"
+            },
+            "CostMod": {
+               "_modType": "Multiplier",
+               "__text": "50"
+            },
+            "FireRate": {
+               "_modType": "PreAdd",
+               "__text": "0.12"
+            },
+            "Spread": {
+               "_modType": "PreAdd",
+               "__text": "2"
+            },
+            "Recoil": {
+               "_modType": "PreAdd",
+               "__text": "1.5"
+            },
+            "ClipSize": {
+               "_modType": "PreAdd",
+               "__text": "28"
+            },
+            "ReloadSpeed": {
+               "_modType": "PreAdd",
+               "__text": "2.1"
+            },
+            "ZoomEndFOV": {
+               "_modType": "PreAdd",
+               "__text": "58"
+            }
+         },
+         "AttrMod": {
+            "AccRegen": {
+               "_modType": "PreAdd",
+               "__text": "-2"
+            },
+            "AccMax": {
+               "_modType": "PreAdd",
+               "__text": "-2"
+            }
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k009"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j008"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x004,x005,x006,x011,x012,x013,x017,x018,x019",
+                  "x023-x028"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p081-p087",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p084,p085,p086,p087"
+            },
+            {
+               "PartType": "Title",
+               "OptionBin": [
+                  "t060-t071"
+               ],
+               "GeneralPool": "t060,t061,t062,t063"
+            },
+            {
+               "PartType": "Body",
+               "OptionBin": [
+                  "f019-f024"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "OptionBin": [
+                  "g029-g034"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "BasePart": "m021",
+               "OptionBin": [
+                  "m020-m025"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "OptionBin": [
+                  "z020-z025"
+               ]
+            },
+            {
+               "PartType": "Stock",
+               "BasePart": "s009",
+               "OptionBin": [
+                  "s009-s014"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "OptionBin": [
+                  "a046-a055"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "OptionBin": [
+                  "b025-b032"
+               ]
+            }
+         ],
+         "ConstraintList": {
+            "Option": [
+               {
+                  "Tag": "p083",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Elemental Flag",
+                        "CompOperator": "LessThan",
+                        "OperandTwo": "1"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p085",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p086",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "8"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p087",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "11"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t062",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Fire Rate",
+                        "CompOperator": "LessThan",
+                        "OperandTwo": "0.082"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t061",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Normalized Damage",
+                        "CompOperator": "GreaterThan",
+                        "OperandTwo": "1"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t063",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "6"
+                     },
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "GreaterThan",
+                        "OperandTwo": "3.3"
+                     }
+                  ]
+               }
+            ]
+         }
+      },
+      {
+         "TargetType": "Machine Pistol",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i010",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "48",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i007",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i004",
+                  "ExpLevel": [
+                     "8",
+                     "17",
+                     "27",
+                     "35",
+                     "44",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "BaseStats": {
+            "Damage": {
+               "_modType": "Scale",
+               "__text": "0.9"
+            },
+            "CostMod": {
+               "_modType": "Multiplier",
+               "__text": "38"
+            },
+            "FireRate": {
+               "_modType": "PreAdd",
+               "__text": "0.12"
+            },
+            "Spread": {
+               "_modType": "PreAdd",
+               "__text": "2"
+            },
+            "Recoil": {
+               "_modType": "PreAdd",
+               "__text": "1.5"
+            },
+            "ClipSize": {
+               "_modType": "PreAdd",
+               "__text": "16"
+            },
+            "ReloadSpeed": {
+               "_modType": "PreAdd",
+               "__text": "2.25"
+            },
+            "ZoomEndFOV": {
+               "_modType": "PreAdd",
+               "__text": "62"
+            }
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k008"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j006"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x011,x012,x013,x020,x021,x022,x029,x030,x031"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "OptionBin": [
+                  "a044,a045,a043",
+                  "a028,a029,a032,a033,a034,a036,a037,a039,a041"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "OptionBin": [
+                  "b017,b018,b019,b020,b021,b023,b024"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "Option": [
+                  "f018"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "OptionBin": [
+                  "g026,g027,g028"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "OptionBin": [
+                  "m017,m018,m019"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "OptionBin": [
+                  "z013,z014,z015,z016,z017,z019"
+               ]
+            },
+            {
+               "PartType": "Action",
+               "OptionBin": [
+                  "e001-e005"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p077-p080",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p078,p079,p080"
+            },
+            {
+               "PartType": "Title",
+               "OptionBin": [
+                  "t052-t059"
+               ],
+               "GeneralPool": "t052,t053,t054"
+            }
+         ],
+         "ConstraintList": {
+            "Option": [
+               {
+                  "Tag": "p078",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p079",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "8"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p080",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "11"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t053",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "GreaterThan",
+                        "OperandTwo": "2.5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t054",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Normalized Damage",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "1"
+                     },
+                     {
+                        "AttrToCheck": "Elemental Flag",
+                        "CompOperator": "LessThan",
+                        "OperandTwo": "1"
+                     }
+                  ]
+               }
+            ]
+         }
+      },
+      {
+         "TargetType": "Sniper Rifle",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i010",
+                  "ExpLevel": [
+                     "7",
+                     "21",
+                     "30",
+                     "39",
+                     "48",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i006",
+                  "ExpLevel": [
+                     "9",
+                     "17",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i005",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i001",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "48",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "BaseStats": {
+            "Damage": {
+               "_modType": "Scale",
+               "__text": "3.6"
+            },
+            "CostMod": {
+               "_modType": "Multiplier",
+               "__text": "55"
+            },
+            "FireRate": {
+               "_modType": "PreAdd",
+               "__text": "1.65"
+            },
+            "Spread": {
+               "_modType": "PreAdd",
+               "__text": "0.4"
+            },
+            "Recoil": {
+               "_modType": "PreAdd",
+               "__text": "15"
+            },
+            "ClipSize": {
+               "_modType": "PreAdd",
+               "__text": "6"
+            },
+            "ReloadSpeed": {
+               "_modType": "PreAdd",
+               "__text": "4"
+            },
+            "BurstCount": {
+               "_modType": "PreAdd",
+               "__text": "1"
+            },
+            "ZoomEndFOV": {
+               "_modType": "PreAdd",
+               "__text": "36"
+            }
+         },
+         "AttrMod": {
+            "AccRegen": {
+               "_modType": "PreAdd",
+               "__text": "2"
+            },
+            "AccMin": {
+               "_modType": "PreAdd",
+               "__text": "3"
+            },
+            "CritBonus": {
+               "_modType": "PreAdd",
+               "__text": "2"
+            }
+         },
+         "PartList": [
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p088-p095",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p091,p092,p093,p094,p095"
+            },
+            {
+               "PartType": "Title",
+               "OptionBin": [
+                  "t072-t081"
+               ],
+               "GeneralPool": "t072,t073,t074,t075"
+            },
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k006"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j010"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x001,x002,x003,x029,x030,x031",
+                  "x014-x019"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "OptionBin": [
+                  "a056-a064"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "OptionBin": [
+                  "b033-b039"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "OptionBin": [
+                  "f025,f026,f027"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "OptionBin": [
+                  "g036,g039,g041,g055"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "BasePart": "m026-m027-m028",
+               "OptionBin": [
+                  "m026,m027,m028"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "OptionBin": [
+                  "z026-z032"
+               ]
+            },
+            {
+               "PartType": "Stock",
+               "BasePart": "s015-s016",
+               "OptionBin": [
+                  "s015-s019"
+               ]
+            }
+         ],
+         "ConstraintList": {
+            "Option": [
+               {
+                  "Tag": "p091",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p092",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "8"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p093",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "11"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p094",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "0.2"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p095",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Fire Rate",
+                        "CompOperator": "LessThan",
+                        "OperandTwo": "0.5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t073",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "LessThan",
+                        "OperandTwo": "0.16"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t074",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Normalized Damage",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5.2"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t075",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "4"
+                     },
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "0.61"
+                     }
+                  ]
+               }
+            ]
+         }
+      },
+      {
+         "TargetType": "Semi-Auto Sniper Rifle",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i002",
+                  "ExpLevel": [
+                     "6",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i007",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i009",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "49",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i004",
+                  "ExpLevel": [
+                     "8",
+                     "17",
+                     "26",
+                     "35",
+                     "44",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "BaseStats": {
+            "Damage": {
+               "_modType": "Scale",
+               "__text": "3.2"
+            },
+            "CostMod": {
+               "_modType": "Multiplier",
+               "__text": "56"
+            },
+            "FireRate": {
+               "_modType": "PreAdd",
+               "__text": "0.7"
+            },
+            "Spread": {
+               "_modType": "PreAdd",
+               "__text": "0.6"
+            },
+            "Recoil": {
+               "_modType": "PreAdd",
+               "__text": "12"
+            },
+            "ClipSize": {
+               "_modType": "PreAdd",
+               "__text": "5"
+            },
+            "ReloadSpeed": {
+               "_modType": "PreAdd",
+               "__text": "3.5"
+            },
+            "BurstCount": {
+               "_modType": "PreAdd",
+               "__text": "1"
+            },
+            "ZoomEndFOV": {
+               "_modType": "PreAdd",
+               "__text": "36"
+            }
+         },
+         "AttrMod": {
+            "AccRegen": {
+               "_modType": "PreAdd",
+               "__text": "2"
+            },
+            "AccMin": {
+               "_modType": "PreAdd",
+               "__text": "3"
+            },
+            "CritBonus": {
+               "_modType": "PreAdd",
+               "__text": "1.8"
+            }
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k005"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j011"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p096-p099",
+                  "p088-p095",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p091,p092,p093,p094,p095,p099"
+            },
+            {
+               "PartType": "Title",
+               "OptionBin": [
+                  "t082-t090"
+               ],
+               "Option": [
+                  "t072"
+               ],
+               "GeneralPool": "t082,t083,t084"
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x004,x005,x006,x020,x021,x022,x026,x027,x028,x011,x012,x013"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "OptionBin": [
+                  "a065-a069",
+                  "a056,a058,a059,a061,a062"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "b040"
+               ],
+               "OptionBin": [
+                  "b033,b034,b036,b037,b039"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "OptionBin": [
+                  "f028,f029"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "OptionBin": [
+                  "g035,g037,g038,g040,g042"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "BasePart": "m029",
+               "OptionBin": [
+                  "m029,m030,m031"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "OptionBin": [
+                  "z026-z030"
+               ]
+            },
+            {
+               "PartType": "Stock",
+               "BasePart": "s015-s016-s017-s018-s019",
+               "OptionBin": [
+                  "s015-s019"
+               ]
+            }
+         ],
+         "ConstraintList": {
+            "Option": [
+               {
+                  "Tag": "p091",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p092",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "8"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p093",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "11"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p094",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "0.2"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p095",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Fire Rate",
+                        "CompOperator": "LessThan",
+                        "OperandTwo": "0.5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p099",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Reload Speed",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "3"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t082",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "LessThan",
+                        "OperandTwo": "0.22"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t083",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Normalized Damage",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t084",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5"
+                     },
+                     {
+                        "AttrToCheck": "Tech Level",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "7"
+                     }
+                  ]
+               }
+            ]
+         }
+      },
+      {
+         "TargetType": "Combat Rifle",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i008",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i002",
+                  "ExpLevel": [
+                     "9",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i004",
+                  "ExpLevel": [
+                     "8",
+                     "17",
+                     "26",
+                     "35",
+                     "44",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "BaseStats": {
+            "Damage": {
+               "_modType": "Scale",
+               "__text": "1.2"
+            },
+            "CostMod": {
+               "_modType": "Multiplier",
+               "__text": "50"
+            },
+            "FireRate": {
+               "_modType": "PreAdd",
+               "__text": "0.1"
+            },
+            "Spread": {
+               "_modType": "PreAdd",
+               "__text": "1.3"
+            },
+            "Recoil": {
+               "_modType": "PreAdd",
+               "__text": "3.5"
+            },
+            "ClipSize": {
+               "_modType": "PreAdd",
+               "__text": "12"
+            },
+            "ReloadSpeed": {
+               "_modType": "PreAdd",
+               "__text": "2.4"
+            },
+            "BurstCount": {
+               "_modType": "PreAdd",
+               "__text": "3"
+            },
+            "ZoomEndFOV": {
+               "_modType": "PreAdd",
+               "__text": "48"
+            }
+         },
+         "AttrMod": {
+            "AccMin": {
+               "_modType": "PreAdd",
+               "__text": "-0.5"
+            }
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k011"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j004"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x004,x005,x006,x011,x012,x013,x023,x024,x025"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p100-p104",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p001,p004,p005,p006,p102,p103"
+            },
+            {
+               "PartType": "Title",
+               "OptionBin": [
+                  "t091-t098"
+               ],
+               "GeneralPool": "t091,t092,t093"
+            },
+            {
+               "PartType": "Accessory",
+               "OptionBin": [
+                  "a070-a076"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "OptionBin": [
+                  "f030-f035"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "OptionBin": [
+                  "b041-b047"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "OptionBin": [
+                  "g057,g056,g043"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "BasePart": "m032",
+               "OptionBin": [
+                  "m032-m035"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "OptionBin": [
+                  "z033-z037"
+               ]
+            },
+            {
+               "PartType": "Stock",
+               "BasePart": "s021",
+               "OptionBin": [
+                  "s020-s025"
+               ]
+            }
+         ],
+         "ConstraintList": {
+            "Option": [
+               {
+                  "Tag": "p102",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Normalized Damage",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "2"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p103",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Elemental Flag",
+                        "CompOperator": "LessThan",
+                        "OperandTwo": "1"
+                     },
+                     {
+                        "AttrToCheck": "Normalized Damage",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "1.1"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t092",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "0.85"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t093",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5"
+                     },
+                     {
+                        "AttrToCheck": "Normalized Damage",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "1.38"
+                     }
+                  ]
+               }
+            ]
+         }
+      },
+      {
+         "TargetType": "Support MG",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i010",
+                  "ExpLevel": [
+                     "6",
+                     "21",
+                     "30",
+                     "39",
+                     "48",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i007",
+                  "ExpLevel": [
+                     "8",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i009",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "49",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i001",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "48",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "BaseStats": {
+            "Damage": {
+               "_modType": "Scale",
+               "__text": "1"
+            },
+            "CostMod": {
+               "_modType": "Multiplier",
+               "__text": "50"
+            },
+            "FireRate": {
+               "_modType": "PreAdd",
+               "__text": "0.17"
+            },
+            "Spread": {
+               "_modType": "PreAdd",
+               "__text": "2.4"
+            },
+            "Recoil": {
+               "_modType": "PreAdd",
+               "__text": "2.2"
+            },
+            "ClipSize": {
+               "_modType": "PreAdd",
+               "__text": "24"
+            },
+            "ReloadSpeed": {
+               "_modType": "PreAdd",
+               "__text": "3"
+            },
+            "ZoomEndFOV": {
+               "_modType": "PreAdd",
+               "__text": "48"
+            }
+         },
+         "AttrMod": {
+            "AccMax": {
+               "_modType": "PreAdd",
+               "__text": "2"
+            }
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k002"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j005"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x001,x002,x003,x020,x021,x022",
+                  "x026-x031"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p104-p112",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p106,p108,p109,p110,p111,p112"
+            },
+            {
+               "PartType": "Title",
+               "OptionBin": [
+                  "t099-t106"
+               ],
+               "GeneralPool": "t099,t100,t101,t102"
+            },
+            {
+               "PartType": "Accessory",
+               "OptionBin": [
+                  "a077-a080",
+                  "a070,a072,a073,a074,a075,a076"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "OptionBin": [
+                  "b043,b044,b045,b046,b048"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "OptionBin": [
+                  "f031,f032,f033,f035"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "OptionBin": [
+                  "m036-m039"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "OptionBin": [
+                  "g044,g045,g046,g047"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "OptionBin": [
+                  "z038,z039,z040"
+               ]
+            },
+            {
+               "PartType": "Stock",
+               "BasePart": "s022",
+               "OptionBin": [
+                  "s022-s025"
+               ]
+            }
+         ],
+         "ConstraintList": {
+            "Option": [
+               {
+                  "Tag": "p106",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "3"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p108",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Recoil",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "1.85"
+                     },
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p110",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p111",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "8"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p112",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "11"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t100",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "1.2"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t101",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Normalized Damage",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "1.8"
+                     },
+                     {
+                        "AttrToCheck": "Fire Rate",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "0.2"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t102",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5"
+                     },
+                     {
+                        "AttrToCheck": "Fire Rate",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "0.1"
+                     },
+                     {
+                        "AttrToCheck": "Burst Count",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "0"
+                     }
+                  ]
+               }
+            ]
+         }
+      },
+      {
+         "TargetType": "Rocket Launcher",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i010",
+                  "ExpLevel": [
+                     "11",
+                     "21",
+                     "30",
+                     "39",
+                     "48",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i006",
+                  "ExpLevel": [
+                     "9",
+                     "17",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i009",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "49",
+                     "50"
+                  ]
+               },
+               {
+                  "Name": "i004",
+                  "ExpLevel": [
+                     "8",
+                     "17",
+                     "26",
+                     "35",
+                     "44",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "BaseStats": {
+            "Damage": {
+               "_modType": "Scale",
+               "__text": "7"
+            },
+            "CostMod": {
+               "_modType": "Multiplier",
+               "__text": "60"
+            },
+            "FireRate": {
+               "_modType": "PreAdd",
+               "__text": "1.5"
+            },
+            "Spread": {
+               "_modType": "PreAdd",
+               "__text": "1"
+            },
+            "Recoil": {
+               "_modType": "PreAdd",
+               "__text": "6"
+            },
+            "ClipSize": {
+               "_modType": "PreAdd",
+               "__text": "2"
+            },
+            "ReloadSpeed": {
+               "_modType": "PreAdd",
+               "__text": "3.5"
+            },
+            "ZoomEndFOV": {
+               "_modType": "PreAdd",
+               "__text": "65"
+            }
+         },
+         "AttrMod": {
+            "AccMax": {
+               "_modType": "Scale",
+               "__text": "-4"
+            }
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k003"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j009"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x017,x018,x019,x011,x012,x013",
+                  "x026-x031"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p113-p121",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p119,p120,p121"
+            },
+            {
+               "PartType": "Title",
+               "OptionBin": [
+                  "t107-t115"
+               ],
+               "GeneralPool": "t109,t108,t107"
+            },
+            {
+               "PartType": "Accessory",
+               "OptionBin": [
+                  "a081-a087"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "OptionBin": [
+                  "b049-b058"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "OptionBin": [
+                  "f036,f037,f038"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "OptionBin": [
+                  "g049,g051,g053,g054"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "OptionBin": [
+                  "m040-m044"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "OptionBin": [
+                  "z041-z045"
+               ]
+            },
+            {
+               "PartType": "Stock",
+               "BasePart": "s026",
+               "OptionBin": [
+                  "s026-s029"
+               ]
+            }
+         ],
+         "ConstraintList": {
+            "Option": [
+               {
+                  "Tag": "p119",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "5"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p120",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "8"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "p121",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Rarity",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "11"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t107",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Clip Size",
+                        "CompOperator": "Equal",
+                        "OperandTwo": "1"
+                     },
+                     {
+                        "AttrToCheck": "Spread",
+                        "CompOperator": "LessThanOrEqual",
+                        "OperandTwo": "0.75"
+                     }
+                  ]
+               },
+               {
+                  "Tag": "t108",
+                  "Constraint": [
+                     {
+                        "AttrToCheck": "Normalized Damage",
+                        "CompOperator": "GreaterThanOrEqual",
+                        "OperandTwo": "10"
+                     }
+                  ]
+               }
+            ]
+         }
+      },
+      {
+         "TargetType": "Tediore Avenger",
+         "BaseTemplate": "Combat Rifle",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i008",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k012"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t122"
+               ],
+               "GeneralPool": "t122"
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p100-p104",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p001,p004,p005,p006,p102,p103"
+            },
+            {
+               "PartType": "Body",
+               "OptionBin": [
+                  "f030,f032,f033,f035"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "OptionBin": [
+                  "m032,m034"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g043"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u041"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "u042"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Dahl Jackal",
+         "BaseTemplate": "Combat Shotgun",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i002",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k013"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t117"
+               ],
+               "GeneralPool": "t117"
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p056-p062",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p001,p004,p005,p006,p058,p059,p061"
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g003"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u044"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u043"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "OptionBin": [
+                  "m003,m004,m006,m007"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Vladof Stalker",
+         "BaseTemplate": "Machine Pistol",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i010",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k014"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t124"
+               ],
+               "GeneralPool": "t124"
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p077-p080",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p078,p079,p080"
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u046"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g026"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u045"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "OptionBin": [
+                  "a042,a044,a045,a029,a032,a033,a034"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Hyperion Nemesis",
+         "BaseTemplate": "Repeater Pistol",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i004",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k015"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t118"
+               ],
+               "GeneralPool": "t118"
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p070-p076",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p072,p073,p074,p075,p076"
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g025"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u048"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "u047"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Atlas Aries",
+         "BaseTemplate": "Revolver",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i001",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k016"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t116"
+               ],
+               "GeneralPool": "t116"
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p063-p069",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p064,p065,p066,p067,p068,p069"
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u055"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g016"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "u054"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Torgue Undertaker",
+         "BaseTemplate": "Rocket Launcher",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i009",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k017"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t123"
+               ],
+               "GeneralPool": "t123"
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p113-p121",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p119,p120,p121"
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g053"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u057"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u056"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Maliwan Tsunami",
+         "BaseTemplate": "Patrol SMG",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i006",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k018"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t120"
+               ],
+               "GeneralPool": "t120"
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p081-p087",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p084,p085,p086,p087"
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u063"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g031"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "u062"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Jakobs Bessie",
+         "BaseTemplate": "Sniper Rifle",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i005",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k019"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t119"
+               ],
+               "GeneralPool": "t119"
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p088-p095"
+               ],
+               "GeneralPool": "p091,p092,p093,p094,p095"
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u064"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g041"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "u065"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "OptionBin": [
+                  "b033,b034,b036,b037,b039"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "SandS Serpens",
+         "BaseTemplate": "Support MG",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i007",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k020"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t121"
+               ],
+               "GeneralPool": "t121"
+            },
+            {
+               "PartType": "Prefix",
+               "OptionBin": [
+                  "p105-p112",
+                  "p001-p048"
+               ],
+               "GeneralPool": "p106,p108,p109,p110,p111,p112"
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u067"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "OptionBin": [
+                  "m036,m037,m038"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "OptionBin": [
+                  "b043,b044,b045,b046"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "u066"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g045"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Athena's Wisdom",
+         "BaseTemplate": "Repeater Pistol",
+         "OverrideNaming": [
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i004",
+                  "ExpLevel": [
+                     "9",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k021"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t125"
+               ],
+               "GeneralPool": "t125"
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g025"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u052"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u051"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "OptionBin": [
+                  "z014-z017"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "OptionBin": [
+                  "a028,a029,a030,a032,a033,a034,a036,a037,a039,a041"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Chiquito Amigo",
+         "BaseTemplate": "Repeater Pistol",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i008",
+                  "ExpLevel": [
+                     "9",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k022"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t126"
+               ],
+               "GeneralPool": "t126"
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u050"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g017"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u049"
+               ]
+            }
+         ],
+         "OverrideNaming": [
+            "Yes"
+         ]
+      },
+      {
+         "TargetType": "Knoxx's Gold",
+         "BaseTemplate": "Repeater Pistol",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i007",
+                  "ExpLevel": [
+                     "9",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k023"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t127"
+               ],
+               "GeneralPool": "t127"
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u053"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "OptionBin": [
+                  "b020,b021,b023"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g020"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "OptionBin": [
+                  "a028,a029,a030,a032,a033,a034,a036,a037,a039,a041"
+               ]
+            }
+         ],
+         "OverrideNaming": [
+            "Yes"
+         ]
+      },
+      {
+         "TargetType": "Kyros' Power",
+         "BaseTemplate": "Sniper Rifle",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i001",
+                  "ExpLevel": [
+                     "9",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k024"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t128"
+               ],
+               "GeneralPool": "t128"
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g055"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u059"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "u058"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "OptionBin": [
+                  "b033,b034,b036,b037,b039"
+               ]
+            }
+         ],
+         "OverrideNaming": [
+            "Yes"
+         ]
+      },
+      {
+         "TargetType": "Dahl Typhoon",
+         "BaseTemplate": "Patrol SMG",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i002",
+                  "ExpLevel": [
+                     "9",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k025"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t129"
+               ],
+               "GeneralPool": "t129"
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g030"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u061"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "u060"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "OptionBin": [
+                  "b025,b026,b028,b030,b031"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "OptionBin": [
+                  "m021,m022,m023,m025"
+               ]
+            }
+         ],
+         "OverrideNaming": [
+            "Yes"
+         ]
+      },
+      {
+         "TargetType": "Ajax's Spear",
+         "BaseTemplate": "Support MG",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i001",
+                  "ExpLevel": [
+                     "9",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k026"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t130"
+               ],
+               "GeneralPool": "t130"
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g047"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u071"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u070"
+               ]
+            }
+         ],
+         "OverrideNaming": [
+            "Yes"
+         ]
+      },
+      {
+         "TargetType": "The Chopper",
+         "BaseTemplate": "Support MG",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i010",
+                  "ExpLevel": [
+                     "9",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k027"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t131"
+               ],
+               "GeneralPool": "t131"
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g044"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u069"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "u068"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "OptionBin": [
+                  "m037,m038"
+               ]
+            }
+         ],
+         "OverrideNaming": [
+            "Yes"
+         ]
+      },
+      {
+         "TargetType": "Gearbox Assault Shotgun",
+         "BaseTemplate": "Assault Shotgun",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i003",
+                  "ExpLevel": [
+                     "5",
+                     "14",
+                     "23",
+                     "32",
+                     "41",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k028"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j002"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x008-x010"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g004"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Gearbox Combat Shotgun",
+         "BaseTemplate": "Combat Shotgun",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i003",
+                  "ExpLevel": [
+                     "5",
+                     "14",
+                     "23",
+                     "32",
+                     "41",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k030"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j003"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x008-x010"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g004"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Gearbox Combat Rifle",
+         "BaseTemplate": "Combat Rifle",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i003",
+                  "ExpLevel": [
+                     "5",
+                     "14",
+                     "23",
+                     "32",
+                     "41",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k029"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j004"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x008-x010"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g048"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Gearbox Support MG",
+         "BaseTemplate": "Support MG",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i003",
+                  "ExpLevel": [
+                     "5",
+                     "14",
+                     "23",
+                     "32",
+                     "41",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k038"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j005"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x008-x010"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g048"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Gearbox Revolver",
+         "BaseTemplate": "Revolver",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i003",
+                  "ExpLevel": [
+                     "5",
+                     "14",
+                     "23",
+                     "32",
+                     "41",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k034"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j001"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x008-x010"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g014"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Gearbox Repeater",
+         "BaseTemplate": "Repeater Pistol",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i003",
+                  "ExpLevel": [
+                     "5",
+                     "14",
+                     "23",
+                     "32",
+                     "41",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k033"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j007"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x008-x010"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g021"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Gearbox Machine Pistol",
+         "BaseTemplate": "Machine Pistol",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i003",
+                  "ExpLevel": [
+                     "5",
+                     "14",
+                     "23",
+                     "32",
+                     "41",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k032"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j006"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x008-x010"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g021"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Gearbox Sniper Rifle",
+         "BaseTemplate": "Sniper Rifle",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i003",
+                  "ExpLevel": [
+                     "5",
+                     "14",
+                     "23",
+                     "32",
+                     "41",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k037"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j010"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x008-x010"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g040"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Gearbox Semi-Auto Sniper Rifle",
+         "BaseTemplate": "Semi-Auto Sniper Rifle",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i003",
+                  "ExpLevel": [
+                     "5",
+                     "14",
+                     "23",
+                     "32",
+                     "41",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k035"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j011"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x008-x010"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g040"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Gearbox SMG",
+         "BaseTemplate": "Patrol SMG",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i003",
+                  "ExpLevel": [
+                     "5",
+                     "14",
+                     "23",
+                     "32",
+                     "41",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k036"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j008"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x008-x010"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g033"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Gearbox Rocket Launcher",
+         "BaseTemplate": "Rocket Launcher",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i003",
+                  "ExpLevel": [
+                     "5",
+                     "14",
+                     "23",
+                     "32",
+                     "41",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k031"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j009"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "OptionBin": [
+                  "x008-x010"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g052"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Madjack",
+         "BaseTemplate": "Revolver",
+         "OverrideNaming": [
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i006",
+                  "ExpLevel": [
+                     "8",
+                     "17",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k039"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j001"
+               ]
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t033"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u011"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "u009"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u010"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "Option": [
+                  "m008"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g013"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "z007"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Sentinel",
+         "BaseTemplate": "Combat Rifle",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i004",
+                  "ExpLevel": [
+                     "8",
+                     "17",
+                     "26",
+                     "35",
+                     "44",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k040"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j004"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u033"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t098"
+               ],
+               "GeneralPool": "t098"
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "u034"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "b044"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "Option": [
+                  "f033"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g057"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "Option": [
+                  "m032"
+               ]
+            },
+            {
+               "PartType": "Stock",
+               "Option": [
+                  "s022"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Blister",
+         "BaseTemplate": "Combat Shotgun",
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i009",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "49",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "OverrideNaming": [
+            "Yes"
+         ],
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k041"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j003"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u002"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t019"
+               ],
+               "GeneralPool": "t019"
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "z004"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "a009"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u001"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g005"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "Option": [
+                  "m006"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Dove",
+         "BaseTemplate": "Repeater Pistol",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i002",
+                  "ExpLevel": [
+                     "4",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k042"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j007"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u019"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t051"
+               ],
+               "GeneralPool": "t051"
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "z019"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u018"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "Option": [
+                  "f013"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g024"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "Option": [
+                  "m013"
+               ]
+            },
+            {
+               "PartType": "Action",
+               "Option": [
+                  "e003"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Patton",
+         "BaseTemplate": "Revolver",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i001",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "48",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k043"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j001"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u013"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t034"
+               ],
+               "GeneralPool": "t034"
+            },
+            {
+               "PartType": "Stock",
+               "Option": [
+                  "s006"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "b010"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "Option": [
+                  "f012"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "u012"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "Option": [
+                  "m009"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "a027"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Leviathan",
+         "BaseTemplate": "Rocket Launcher",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i009",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "49",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k044"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j009"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u038"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t114"
+               ],
+               "GeneralPool": "t114"
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "z042"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u037"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "Option": [
+                  "f036"
+               ]
+            },
+            {
+               "PartType": "Stock",
+               "Option": [
+                  "s026"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g053"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Spy",
+         "BaseTemplate": "Patrol SMG",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i004",
+                  "ExpLevel": [
+                     "8",
+                     "17",
+                     "26",
+                     "35",
+                     "44",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k045"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j008"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u027"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t071"
+               ],
+               "GeneralPool": "t071"
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "u028"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "b028"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g034"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "Option": [
+                  "m022"
+               ]
+            },
+            {
+               "PartType": "Stock",
+               "Option": [
+                  "s011"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Nailer",
+         "BaseTemplate": "Semi-Auto Sniper Rifle",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i002",
+                  "ExpLevel": [
+                     "6",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k046"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j011"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u023"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t080"
+               ],
+               "GeneralPool": "t080"
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "z028"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u022"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "Option": [
+                  "f028"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g035"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "Option": [
+                  "m030"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Rider",
+         "BaseTemplate": "Semi-Auto Sniper Rifle",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i003",
+                  "ExpLevel": [
+                     "5",
+                     "14",
+                     "23",
+                     "32",
+                     "41",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k047"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j011"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u032"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t090"
+               ],
+               "GeneralPool": "t090"
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "z032"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "b034"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "Option": [
+                  "f029"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g040"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "Option": [
+                  "u031"
+               ]
+            },
+            {
+               "PartType": "Stock",
+               "Option": [
+                  "s016"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Boom Stick",
+         "BaseTemplate": "Combat Shotgun",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i009",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "49",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k048"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j003"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u004"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t018"
+               ],
+               "GeneralPool": "t018"
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "z002"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u003"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g005"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "Option": [
+                  "m006"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Sledge's Shotgun",
+         "BaseTemplate": "Combat Shotgun",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i005",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k049"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j003"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u006"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t020"
+               ],
+               "GeneralPool": "t020"
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "z006"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u005"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "Option": [
+                  "f006"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g009"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "Option": [
+                  "m007"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "a007"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "T.K.'s Wave",
+         "BaseTemplate": "Combat Shotgun",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i002",
+                  "ExpLevel": [
+                     "7",
+                     "20",
+                     "29",
+                     "38",
+                     "47",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k050"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j003"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u008"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t021"
+               ],
+               "GeneralPool": "t021"
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u007"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "a016"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g003"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Clipper",
+         "BaseTemplate": "Machine Pistol",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i010",
+                  "ExpLevel": [
+                     "4",
+                     "14",
+                     "24",
+                     "34",
+                     "44",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k051"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j006"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u021"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t059"
+               ],
+               "GeneralPool": "t059"
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "z019"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "b017"
+               ]
+            },
+            {
+               "PartType": "Action",
+               "Option": [
+                  "e002"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g018"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "Option": [
+                  "m014"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "u020"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Krom's Sidearm",
+         "BaseTemplate": "Repeater Pistol",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i001",
+                  "ExpLevel": [
+                     "12",
+                     "25",
+                     "33",
+                     "39",
+                     "48",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k052"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j007"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u015"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t049"
+               ],
+               "GeneralPool": "t049"
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "z015"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u014"
+               ]
+            },
+            {
+               "PartType": "Action",
+               "Option": [
+                  "e004"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g019"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "Option": [
+                  "m014"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "a041"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Lady Finger",
+         "BaseTemplate": "Repeater Pistol",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i004",
+                  "ExpLevel": [
+                     "4",
+                     "17",
+                     "26",
+                     "35",
+                     "44",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k053"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j007"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u017"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t050"
+               ],
+               "GeneralPool": "t050"
+            },
+            {
+               "PartType": "Sight",
+               "OptionBin": [
+                  "z014-z017"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "u016"
+               ]
+            },
+            {
+               "PartType": "Body",
+               "Option": [
+                  "f015"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g025"
+               ]
+            },
+            {
+               "PartType": "Action",
+               "Option": [
+                  "e002"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Roaster",
+         "BaseTemplate": "Rocket Launcher",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i006",
+                  "ExpLevel": [
+                     "9",
+                     "17",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k054"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j009"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u040"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t115"
+               ],
+               "GeneralPool": "t115"
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g051"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "a039"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Reaver's Edge",
+         "BaseTemplate": "Semi-Auto Sniper Rifle",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i002",
+                  "ExpLevel": [
+                     "7",
+                     "18",
+                     "27",
+                     "36",
+                     "45",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k055"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j011"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u029"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t089"
+               ],
+               "GeneralPool": "t089"
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g035"
+               ]
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "u030"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Bone Shredder",
+         "BaseTemplate": "Patrol SMG",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i008",
+                  "ExpLevel": [
+                     "5",
+                     "17",
+                     "26",
+                     "35",
+                     "44",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k056"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j008"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "t070"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t070"
+               ],
+               "GeneralPool": "t070"
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "z022"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "b028"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g029"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "Option": [
+                  "u026"
+               ]
+            },
+            {
+               "PartType": "Accessory",
+               "Option": [
+                  "a051"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Elephant Gun",
+         "BaseTemplate": "Sniper Rifle",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i005",
+                  "ExpLevel": [
+                     "6",
+                     "15",
+                     "24",
+                     "33",
+                     "42",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k057"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j010"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u024"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t081"
+               ],
+               "GeneralPool": "t081"
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "u025"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "b036"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g041"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "Option": [
+                  "m028"
+               ]
+            },
+            {
+               "PartType": "Stock",
+               "Option": [
+                  "s016"
+               ]
+            }
+         ]
+      },
+      {
+         "TargetType": "Meat Grinder",
+         "BaseTemplate": "Support MG",
+         "OverrideNaming": [
+            "Yes",
+            "Yes",
+            "Yes"
+         ],
+         "ValidMakes": {
+            "Manufacturer": [
+               {
+                  "Name": "i009",
+                  "ExpLevel": [
+                     "12",
+                     "21",
+                     "30",
+                     "39",
+                     "49",
+                     "50"
+                  ]
+               }
+            ]
+         },
+         "PartList": [
+            {
+               "PartType": "Item Grade",
+               "Option": [
+                  "k058"
+               ]
+            },
+            {
+               "PartType": "Gear Type",
+               "Option": [
+                  "j005"
+               ]
+            },
+            {
+               "PartType": "Material",
+               "Option": [
+                  "u035"
+               ]
+            },
+            {
+               "PartType": "Prefix",
+               "Option": [
+                  "p018"
+               ],
+               "GeneralPool": "p018"
+            },
+            {
+               "PartType": "Title",
+               "Option": [
+                  "t106"
+               ],
+               "GeneralPool": "t106"
+            },
+            {
+               "PartType": "Sight",
+               "Option": [
+                  "z038"
+               ]
+            },
+            {
+               "PartType": "Barrel",
+               "Option": [
+                  "b043"
+               ]
+            },
+            {
+               "PartType": "Grip",
+               "Option": [
+                  "g046"
+               ]
+            },
+            {
+               "PartType": "Magazine",
+               "Option": [
+                  "u036"
+               ]
+            },
+            {
+               "PartType": "Stock",
+               "Option": [
+                  "s023"
+               ]
+            }
+         ]
+      }
+   ],
+   "_blversion": "1.3"
+}
