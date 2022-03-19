@@ -59,8 +59,17 @@ def parse_xml(path):
     return df2
 
 
+def generate(df):
+
+    # collect a list of unique PartType values
+    part_types = df['PartType'].unique()
+    print(part_types)
+
+    return 0
+
 if __name__ == "__main__":
     g_df = parse_xml('xml/WeaponParts.xml')
     s_df = parse_xml('xml/ShieldParts.xml')
 
-
+    guns = generate(g_df)
+    shields = generate(s_df)
