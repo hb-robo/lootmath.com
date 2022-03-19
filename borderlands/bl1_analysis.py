@@ -3,11 +3,10 @@
 import pandas as pd
 import xml.etree.ElementTree as ET
 
-def parse_gun_parts():
+def parse_xml(path):
     # first, we parse the XML file into an ElementTree for QOL
-    tree = ET.parse('xml/WeaponParts.xml')
-
-    gun_parts = {} # dict to store essential part info
+    tree = ET.parse(path)
+    parts = {} # dict to store essential part info
 
     # iterates through ET until it finds "part" elements
     for part in tree.findall('.//Part'):
@@ -15,8 +14,8 @@ def parse_gun_parts():
         id = part.attrib['id']
         name = part.find('Name').text
 
-        gun_parts[name] = {}
-        gun_parts[name]['id'] = id
+        parts[name] = {}
+        parts[name]['id'] = id
 
         # then stores all essential data of the part in the dict
         for attr in part:
@@ -34,27 +33,34 @@ def parse_gun_parts():
             elif attr.tag in ['AttrMod']:
                 for subattr in attr:
                     keyname = "%s_%s_%s" % (attr.tag, subattr.tag, subattr.attrib['modType'])
-                    gun_parts[name][keyname] = subattr.text
+                    parts[name][keyname] = subattr.text
 
             elif attr.tag in ['TechAbility']:
                 elem_grade = attr.attrib['grade']
                 for subattr in attr:
                     keyname = "Tech%s_%s" % (elem_grade, subattr.tag)
-                    gun_parts[name][keyname] = subattr.text
+                    parts[name][keyname] = subattr.text
 
             elif attr.tag in ['CardMod', 'CardText']:
                 for subattr in attr:
                     keyname = "%s_%s" % (attr.tag, subattr.tag)
-                    gun_parts[name][keyname] = subattr.text
+                    parts[name][keyname] = subattr.text
 
             # for everything else, we simply store the tag and its text
             else:
-                gun_parts[name][attr.tag] = attr.text
+                parts[name][attr.tag] = attr.text
 
-    guns_df = pd.DataFrame.from_dict(gun_parts, 'index')
-    guns_df2 = guns_df[~guns_df['PartType'].isin(['Gear Type', 'Item Grade', 'Manufacturer', 'Bullet'])]
-    guns_df2.to_csv('gun_parts.csv')
+    df = pd.DataFrame.from_dict(parts, 'index')
+    df2 = df[~df['PartType'].isin(['Gear Type', 'Item Grade', 'Manufacturer', 'Bullet'])]
+    filename = path.replace('.xml','').replace('xml/', 'csv/')
+    filename += ".csv"
+
+    df2.to_csv(filename)
+    return df2
 
 
 if __name__ == "__main__":
-    parse_gun_parts()
+    g_df = parse_xml('xml/WeaponParts.xml')
+    s_df = parse_xml('xml/ShieldParts.xml')
+
+
