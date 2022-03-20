@@ -17,20 +17,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\borderlands\gun_parts.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\borderlands\shield_parts.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
       </map>
     </option>
   </component>
