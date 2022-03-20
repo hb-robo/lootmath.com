@@ -71,7 +71,7 @@ def parse_xml(path, incl_knoxx=True):
                 parts[name][attr.tag] = attr.text
 
     df = pd.DataFrame.from_dict(parts, 'index')
-    df2 = df.loc[~df['PartType'].isin(['Gear Type', 'Item Grade', 'Manufacturer', 'Bullet'])]
+    df2 = df.loc[~df['PartType'].isin(['Prefix', 'Title', 'Gear Type', 'Item Grade', 'Manufacturer', 'Bullet'])]
 
     weap_type = []
     part_names = []
