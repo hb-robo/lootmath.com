@@ -185,7 +185,41 @@ def parse_rules(xml_file):
                 generation_rules[gear_name][part_type] = list(part_list)
 
     df = pd.DataFrame.from_dict(generation_rules, 'index')
-    identify_parts()
+
+    # now we fill the missing Part Types on the Knoxx weapons
+    knoxx_crs = ['Tediore Avenger']
+    knoxx_cshots = ['Dahl Jackal']
+    knoxx_rps = ['Hyperion Nemesis', "Athena's Wisdom","Chiquito Amigo", "Knoxx's Gold"]
+    knoxx_mps = ['Vladof Stalker']
+    knoxx_revs = ['Atlas Aries']
+    knoxx_rls = ['Torgue Undertaker']
+    knoxx_smgs = ['Maliwan Tsunami', 'Dahl Typhoon']
+    knoxx_srs = ['Jakobs Bessie']
+    knoxx_sasrs = ["Kyros' Power"]
+    knoxx_mgs = ['SandS Serpens', "Ajax's Spear", "The Chopper"]
+    for index, row in df.iterrows():
+        if any(knoxx_r in index for knoxx_r in knoxx_revs):
+            row['Gear Type'] = ['j001']
+        elif any(knoxx_cs in index for knoxx_cs in knoxx_cshots):
+            row['Gear Type'] = ['j003']
+        elif any(knoxx_cr in index for knoxx_cr in knoxx_crs):
+            row['Gear Type'] = ['j004']
+        elif any(knoxx_mg in index for knoxx_mg in knoxx_mgs):
+            row['Gear Type'] = ['j005']
+        elif any(knoxx_mp in index for knoxx_mp in knoxx_mps):
+            row['Gear Type'] = ['j006']
+        elif any(knoxx_rp in index for knoxx_rp in knoxx_rps):
+            row['Gear Type'] = ['j007']
+        elif any(knoxx_smg in index for knoxx_smg in knoxx_smgs):
+            row['Gear Type'] = ['j008']
+        elif any(knoxx_rl in index for knoxx_rl in knoxx_rls):
+            row['Gear Type'] = ['j009']
+        elif any(knoxx_sr in index for knoxx_sr in knoxx_srs):
+            row['Gear Type'] = ['j010']
+        elif any(knoxx_sasr in index for knoxx_sasr in knoxx_sasrs):
+            row['Gear Type'] = ['j011']
+
+    #identify_parts()
 
     df.to_csv('./csv/LootRules.csv')
 
@@ -195,7 +229,6 @@ def identify_parts(df):
 
     for col in list(df):
         if col == 'BaseStats': continue
-        elif:
 
 
 
@@ -205,5 +238,5 @@ if __name__ == "__main__":
 
     #guns = generate(g_df)
     #shields = generate(s_df)
-    #parse_rules('xml/WeaponRules.xml')
-    identify_parts()
+    parse_rules('xml/WeaponRules.xml')
+    #identify_parts()
