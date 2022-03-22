@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/lootmath.iml" filepath="$PROJECT_DIR$/.idea/lootmath.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LootMath.iml" filepath="$PROJECT_DIR$/.idea/LootMath.iml" />
     </modules>
   </component>
 </project>

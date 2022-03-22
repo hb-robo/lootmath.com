@@ -71,7 +71,7 @@ def parse_xml(path, incl_knoxx=True):
                 parts[name][attr.tag] = attr.text
 
     df = pd.DataFrame.from_dict(parts, 'index')
-    df2 = df.loc[~df['PartType'].isin(['Prefix', 'Title', 'Gear Type', 'Item Grade', 'Manufacturer', 'Bullet'])]
+    df2 = df.loc[~df['PartType'].isin(['Gear Type', 'Item Grade', 'Manufacturer', 'Bullet'])]
 
     weap_type = []
     part_names = []
@@ -120,9 +120,90 @@ def generate(df):
 
     return 0
 
+def parse_rules(xml_file):
+
+    tree = ET.parse(xml_file)
+    generation_rules = {} # dict to store essential generation info
+
+    # iterates through ET until it finds "part" elements
+    for gear_type in tree.findall('.//GearTemplate'):
+
+        gear_name = gear_type.find('TargetType').text # e.g. 'Revolver'
+        generation_rules[gear_name] = {}
+
+        for attr in gear_type:
+            if attr.tag == 'TargetType': continue  # already stored as name
+
+            # next, we handle the list of valid manufacturers for the loot type
+            elif attr.tag == 'ValidMakes':
+                manufacturer_list = []
+                for manufacturer in attr:
+                    manufacturer_list.append(manufacturer.find('Name').text)
+                generation_rules[gear_name]['Manufacturer'] = manufacturer_list
+
+            # parse and collect base stats for loot type
+            elif attr.tag in ['BaseStats', 'AttrMod']:
+                stats = {}
+                for stat in attr:
+                    if attr.tag == 'AttrMod':
+                        statname = "AttrMod_%s_%s" % (stat.tag, stat.attrib['modType'])
+                    else:
+                        statname = "%s_%s" % (stat.tag, stat.attrib['modType'])
+
+                    stats[statname] = stat.text
+
+                generation_rules[gear_name]['BaseStats'] = stats
+
+            # now the meat of it, parsing list of legal part variants
+            elif attr.tag == 'PartList':
+                part_type = attr.find('PartType').text
+                part_list = set()
+                for part_pool in attr:
+                    if part_pool.tag == 'PartType': continue
+                    elif part_pool.tag == 'Option':
+                        part_list.add(part_pool.text)
+                    elif part_pool.tag == 'GeneralPool':
+                        split_pool = part_pool.text.split(',')
+                        part_list.update(split_pool)
+                    elif part_pool.tag == 'OptionBin':
+                        if '-' in part_pool.text:
+                            pool_range = part_pool.text.split('-')
+                            prefix = pool_range[0][0] #first letter of range lower bound
+                            low_bound = int(''.join(i for i in pool_range[0] if i.isdigit()))
+                            high_bound = int(''.join(i for i in pool_range[1] if i.isdigit()))
+                            for i in range(low_bound, high_bound+1):
+                                if i < 10:
+                                    part_id = "%s00%s" % (prefix, i)
+                                elif i < 100:
+                                    part_id = "%s0%s" % (prefix, i)
+                                else:
+                                    part_id = "%s%s" % (prefix, i)
+                                part_list.add(part_id)
+                        else:
+                            split_pool = part_pool.text.split(',')
+                            part_list.update(split_pool)
+                generation_rules[gear_name][part_type] = list(part_list)
+
+    df = pd.DataFrame.from_dict(generation_rules, 'index')
+    identify_parts()
+
+    df.to_csv('./csv/LootRules.csv')
+
+
+# a small function that changes the part id numbers to part names in LootRules
+def identify_parts(df):
+
+    for col in list(df):
+        if col == 'BaseStats': continue
+        elif:
+
+
+
 if __name__ == "__main__":
     g_df = parse_xml('xml/WeaponParts.xml', incl_knoxx=False)
     s_df = parse_xml('xml/ShieldParts.xml', incl_knoxx=False)
 
     #guns = generate(g_df)
     #shields = generate(s_df)
+    #parse_rules('xml/WeaponRules.xml')
+    identify_parts()
