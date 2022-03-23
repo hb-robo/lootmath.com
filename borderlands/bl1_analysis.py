@@ -1,6 +1,7 @@
 # LOOTMATH - BORDERLANDS
 
 import pandas as pd
+import numpy as np
 import xml.etree.ElementTree as ET
 from itertools import product
 
@@ -116,14 +117,91 @@ def identify_parts(df, g_df):
                     item_name = g_df.loc[g_df['id'] == id].index.format()
                     replacement_list.append(item_name)
                 flat_list = [item for sublist in replacement_list for item in sublist]
-
-                row[col] = flat_list
-                print(flat_list)
+                if len(flat_list) == 1:
+                    row[col] = flat_list[0]
+                else:
+                    row[col] = flat_list
 
     return df
 
 
-def parse_rules(xml_file, g_df):
+def parse_knoxx(rules_df):
+
+    # here is a list of the unique and legendary Knoxx DLC weapons and their weapon type.
+    knoxx_crs = ['Tediore Avenger'] # combat rifles
+    knoxx_cshots = ['Dahl Jackal'] # combat shotguns
+    knoxx_rps = ['Hyperion Nemesis', "Athena's Wisdom","Chiquito Amigo", "Knoxx's Gold"] # repeaters
+    knoxx_mps = ['Vladof Stalker'] # machine pistols
+    knoxx_revs = ['Atlas Aries'] # revolvers
+    knoxx_rls = ['Torgue Undertaker'] # rocket launchers
+    knoxx_smgs = ['Maliwan Tsunami', 'Dahl Typhoon'] # SMGs
+    knoxx_srs = ['Jakobs Bessie'] # sniper rifles
+    knoxx_sasrs = ["Kyros' Power"] # semi-automatic sniper rifles
+    knoxx_mgs = ['SandS Serpens', "Ajax's Spear", "The Chopper"] # machine guns
+
+    # Since these weapons have their own row, we will correct their Gear Type to the proper weapon category.
+    for index, row in rules_df.iterrows():
+        if any(knoxx_r in index for knoxx_r in knoxx_revs):
+            row['Gear Type'] = ['j001']
+        elif any(knoxx_cs in index for knoxx_cs in knoxx_cshots):
+            row['Gear Type'] = ['j003']
+        elif any(knoxx_cr in index for knoxx_cr in knoxx_crs):
+            row['Gear Type'] = ['j004']
+        elif any(knoxx_mg in index for knoxx_mg in knoxx_mgs):
+            row['Gear Type'] = ['j005']
+        elif any(knoxx_mp in index for knoxx_mp in knoxx_mps):
+            row['Gear Type'] = ['j006']
+        elif any(knoxx_rp in index for knoxx_rp in knoxx_rps):
+            row['Gear Type'] = ['j007']
+        elif any(knoxx_smg in index for knoxx_smg in knoxx_smgs):
+            row['Gear Type'] = ['j008']
+        elif any(knoxx_rl in index for knoxx_rl in knoxx_rls):
+            row['Gear Type'] = ['j009']
+        elif any(knoxx_sr in index for knoxx_sr in knoxx_srs):
+            row['Gear Type'] = ['j010']
+        elif any(knoxx_sasr in index for knoxx_sasr in knoxx_sasrs):
+            row['Gear Type'] = ['j011']
+
+    return rules_df
+
+
+def populate_default_values(rules_df):
+
+    defaults = rules_df.iloc[:11,:]
+    uniques = rules_df.iloc[11:,:]
+
+    # for uniques:
+    # find weapon_type of row
+    # find default row corresponding to weapon type
+    # for empty cells, copy default row values
+    for index, row in uniques.iterrows():
+        gear_type = (row['Gear Type'])
+        default_index = ""
+        for d_index, d_row in defaults.iterrows():
+            if d_row['Gear Type'] == gear_type:
+                default_index = d_index
+                break
+
+
+        for col in list(uniques):
+
+            print(defaults.loc[[default_index], [col]])
+
+            if pd.isnull(uniques.loc[[index], [col]].values):
+                print("%s: %s" % (index, col))
+
+                #print(defaults.loc[[default_index], [col]].values)
+
+                uniques.loc[[index],[col]] = defaults.loc[[default_index], [col]].values
+                print(uniques.loc[[index],[col]].values)
+
+
+    ret_df = pd.concat([defaults, uniques])
+
+    return ret_df
+
+
+def parse_rules(xml_file, guns_df, incl_knoxx):
 
     tree = ET.parse(xml_file)
     generation_rules = {} # dict to store essential generation info
@@ -190,50 +268,19 @@ def parse_rules(xml_file, g_df):
     df = pd.DataFrame.from_dict(generation_rules, 'index')
 
     # now we fill the missing Part Types on the Knoxx weapons.
-    # here is a list of the unique and legendary Knoxx DLC weapons and their weapon type.
-    knoxx_crs = ['Tediore Avenger']
-    knoxx_cshots = ['Dahl Jackal']
-    knoxx_rps = ['Hyperion Nemesis', "Athena's Wisdom","Chiquito Amigo", "Knoxx's Gold"]
-    knoxx_mps = ['Vladof Stalker']
-    knoxx_revs = ['Atlas Aries']
-    knoxx_rls = ['Torgue Undertaker']
-    knoxx_smgs = ['Maliwan Tsunami', 'Dahl Typhoon']
-    knoxx_srs = ['Jakobs Bessie']
-    knoxx_sasrs = ["Kyros' Power"]
-    knoxx_mgs = ['SandS Serpens', "Ajax's Spear", "The Chopper"]
-
-    # Since these weapons have their own row, we will correct their Gear Type to the proper weapon category.
-    for index, row in df.iterrows():
-        if any(knoxx_r in index for knoxx_r in knoxx_revs):
-            row['Gear Type'] = ['j001']
-        elif any(knoxx_cs in index for knoxx_cs in knoxx_cshots):
-            row['Gear Type'] = ['j003']
-        elif any(knoxx_cr in index for knoxx_cr in knoxx_crs):
-            row['Gear Type'] = ['j004']
-        elif any(knoxx_mg in index for knoxx_mg in knoxx_mgs):
-            row['Gear Type'] = ['j005']
-        elif any(knoxx_mp in index for knoxx_mp in knoxx_mps):
-            row['Gear Type'] = ['j006']
-        elif any(knoxx_rp in index for knoxx_rp in knoxx_rps):
-            row['Gear Type'] = ['j007']
-        elif any(knoxx_smg in index for knoxx_smg in knoxx_smgs):
-            row['Gear Type'] = ['j008']
-        elif any(knoxx_rl in index for knoxx_rl in knoxx_rls):
-            row['Gear Type'] = ['j009']
-        elif any(knoxx_sr in index for knoxx_sr in knoxx_srs):
-            row['Gear Type'] = ['j010']
-        elif any(knoxx_sasr in index for knoxx_sasr in knoxx_sasrs):
-            row['Gear Type'] = ['j011']
+    if incl_knoxx:
+        df = parse_knoxx(df)
 
     # Next, we need to replace all four-character ID codes with the names of the
     # corresponding loot part name, for readability and to make some indexing easier.
-    df = identify_parts(df, g_df)
+    df = identify_parts(df, guns_df)
 
-    # Next, we have to handle empty data cells. Two cases in particular:
+    # Finally, we have to handle empty data cells. Two cases in particular:
     #   1. Only the default weapons have the weapon type base stats and
     #       stat modifiers. These need to be copied over to all variants.
     #   2. Unique weapons have empty cells that indicate a deferral to
     #       the base weapon type's part pool. These need to copied over as well.
+    df = populate_default_values(df)
 
 
 
@@ -241,10 +288,9 @@ def parse_rules(xml_file, g_df):
 
 
 if __name__ == "__main__":
-    g_df = parse_xml('xml/WeaponParts.xml', incl_knoxx=False)
-    s_df = parse_xml('xml/ShieldParts.xml', incl_knoxx=False)
+    knoxx = True
 
-    #guns = generate(g_df)
-    #shields = generate(s_df)
-    parse_rules('xml/WeaponRules.xml', g_df)
-    #identify_parts()
+    g_df = parse_xml('xml/WeaponParts.xml', incl_knoxx=knoxx)
+    s_df = parse_xml('xml/ShieldParts.xml', incl_knoxx=knoxx)
+
+    parse_rules('xml/WeaponRules.xml', g_df, incl_knoxx=knoxx)
