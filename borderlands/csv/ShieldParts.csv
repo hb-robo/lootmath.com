@@ -1,4 +1,13 @@
 ,LootCategory,id,PartType,Manufacturer,DispName,TitleAddend,Priority,RarityMod,CardText_CardPriority,CardText_Color,CardText_Text,LinkedTitle,TitleText,CostMod,AttrMod_Capacity_PreAdd,AttrMod_ShieldRegenDelay_Scale,AttrMod_ShieldRegenRate_PreAdd,AttrMod_ShockImpactDamageModifier_Scale,AttrMod_ShockPassiveDamageModifier_Scale,AttrMod_CorrosiveImpactDamageModifier_Scale,AttrMod_CorrosivePassiveDamageModifier_Scale,AttrMod_IncendiaryImpactDamageModifier_Scale,AttrMod_IncendiaryPassiveDamageModifier_Scale,AttrMod_BurstRadius_PostAdd,AttrMod_HealthRegen_PostAdd,AttrMod_Health_Scale,LinkedPrefix,TechMod,AttrMod_Capacity_Scale,AttrMod_ShieldRegenRate_Scale
+Item_Shield,gd_shields,j300,Gear Type,,,,,,,,,,,,,,,,,,,,,,,,,,,
+ItemGrade_Gear_Shield,gd_itemgrades,k300,Item Grade,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CustomItem_Shield_Anshin_Rose,dlc3_gd_customitems,k301,Item Grade,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CustomItem_Shield_Atlas_Omega,dlc3_gd_customitems,k302,Item Grade,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CustomItem_Shield_Pangolin_Ironclad,dlc3_gd_customitems,k303,Item Grade,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CustomItem_Shield_KingWeeWee,gd_customitems,k304,Item Grade,,,,,,,,,,,,,,,,,,,,,,,,,,,
+CustomItem_Shield_CrackedSash,gd_customitems,k305,Item Grade,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Pangolin,gd_manufacturers,i300,Manufacturer,Pangolin,Pangolin,,,,,,,,,,,,,,,,,,,,,,,,,
+Anshin,gd_manufacturers,i301,Manufacturer,Anshin,Anshin,,,,,,,,,,,,,,,,,,,,,,,,,
 Prefix_Max1_Reinforced,gd_shields,p300,Prefix,,Reinforced,3,5.1,,,,,,,,,,,,,,,,,,,,,,,
 Prefix_Max2_Hardened,gd_shields,p301,Prefix,,Hardened,6,6.1,,,,,,,,,,,,,,,,,,,,,,,
 Prefix_Max3_Unbreakable,gd_shields,p302,Prefix,,Unbreakable,9,7.1,,,,,,,,,,,,,,,,,,,,,,,

@@ -6,23 +6,6 @@ from itertools import product
 
 pd.options.mode.chained_assignment = None  # default='warn'
 
-uniques = {
-    'combat_rifles':
-        ['Sentinel','Raven','Guardian','Destroyer','Avenger'],
-    'machine_guns':
-        ['Grinder','Ajax','Chopper','Draco','Ogre','Bastard','Revolution','Serpens'],
-    'repeaters':
-        ['Finger','Dove','Krom','Chiquito','Knoxx','Athena','Troll','Hornet','Invader',
-         'Firehawk','Gemini','Protector','Violator','Rebel','Nemesis'],
-    'machine_pistols':
-        ['Clipper','Reaper','Thanatos','Vengeance','Stalker'],
-    'revolvers':
-        ['Patton','Madjack','Chimera','Anaconda','Unforgiven','Defiler','Equalizer','Aries'],
-    'submachine_guns':
-        ['Shredder','Spy','Typhoon','Wildcat','Bitch','Hellfire','Savior','Gasher','Tsunami']
-}
-
-
 def parse_xml(path, incl_knoxx=True):
     # first, we parse the XML file into an ElementTree for QOL
     tree = ET.parse(path)
@@ -33,6 +16,8 @@ def parse_xml(path, incl_knoxx=True):
 
         id = part.attrib['id']
         name = part.find('Name').text
+        if name in parts:
+            name = "%s_2" % (name)
 
         parts[name] = {}
         parts[name]['id'] = id
@@ -71,7 +56,7 @@ def parse_xml(path, incl_knoxx=True):
                 parts[name][attr.tag] = attr.text
 
     df = pd.DataFrame.from_dict(parts, 'index')
-    df2 = df.loc[~df['PartType'].isin(['Gear Type', 'Item Grade', 'Manufacturer', 'Bullet'])]
+    df2 = df.loc[~df['PartType'].isin(['Bullet'])]
 
     weap_type = []
     part_names = []
@@ -113,14 +98,32 @@ def generate(df):
             part_type_list.append(index)
         type_dicts[part_type] = part_type_list
 
-
-
     all_permutations = [dict(zip(type_dicts, x)) for x in product(*type_dicts.values())]
     print(len(all_permutations))
 
     return 0
 
-def parse_rules(xml_file):
+# a small function that changes the part id numbers to part names in LootRules
+def identify_parts(df, g_df):
+
+    for index, row in df.iterrows():
+        for col in list(df):
+            if col == 'BaseStats' or row[col] != row[col]: # checks for NaN instead of list
+                continue
+            elif row[col]:
+                replacement_list = []
+                for id in row[col]:
+                    item_name = g_df.loc[g_df['id'] == id].index.format()
+                    replacement_list.append(item_name)
+                flat_list = [item for sublist in replacement_list for item in sublist]
+
+                row[col] = flat_list
+                print(flat_list)
+
+    return df
+
+
+def parse_rules(xml_file, g_df):
 
     tree = ET.parse(xml_file)
     generation_rules = {} # dict to store essential generation info
@@ -186,7 +189,8 @@ def parse_rules(xml_file):
 
     df = pd.DataFrame.from_dict(generation_rules, 'index')
 
-    # now we fill the missing Part Types on the Knoxx weapons
+    # now we fill the missing Part Types on the Knoxx weapons.
+    # here is a list of the unique and legendary Knoxx DLC weapons and their weapon type.
     knoxx_crs = ['Tediore Avenger']
     knoxx_cshots = ['Dahl Jackal']
     knoxx_rps = ['Hyperion Nemesis', "Athena's Wisdom","Chiquito Amigo", "Knoxx's Gold"]
@@ -197,6 +201,8 @@ def parse_rules(xml_file):
     knoxx_srs = ['Jakobs Bessie']
     knoxx_sasrs = ["Kyros' Power"]
     knoxx_mgs = ['SandS Serpens', "Ajax's Spear", "The Chopper"]
+
+    # Since these weapons have their own row, we will correct their Gear Type to the proper weapon category.
     for index, row in df.iterrows():
         if any(knoxx_r in index for knoxx_r in knoxx_revs):
             row['Gear Type'] = ['j001']
@@ -219,17 +225,19 @@ def parse_rules(xml_file):
         elif any(knoxx_sasr in index for knoxx_sasr in knoxx_sasrs):
             row['Gear Type'] = ['j011']
 
-    #identify_parts()
+    # Next, we need to replace all four-character ID codes with the names of the
+    # corresponding loot part name, for readability and to make some indexing easier.
+    df = identify_parts(df, g_df)
+
+    # Next, we have to handle empty data cells. Two cases in particular:
+    #   1. Only the default weapons have the weapon type base stats and
+    #       stat modifiers. These need to be copied over to all variants.
+    #   2. Unique weapons have empty cells that indicate a deferral to
+    #       the base weapon type's part pool. These need to copied over as well.
+
+
 
     df.to_csv('./csv/LootRules.csv')
-
-
-# a small function that changes the part id numbers to part names in LootRules
-def identify_parts(df):
-
-    for col in list(df):
-        if col == 'BaseStats': continue
-
 
 
 if __name__ == "__main__":
@@ -238,5 +246,5 @@ if __name__ == "__main__":
 
     #guns = generate(g_df)
     #shields = generate(s_df)
-    parse_rules('xml/WeaponRules.xml')
+    parse_rules('xml/WeaponRules.xml', g_df)
     #identify_parts()
